@@ -1,1 +1,1 @@
-# wgu-portfolio
+# WGU Portfolio
