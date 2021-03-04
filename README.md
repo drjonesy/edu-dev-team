@@ -1,1 +1,1 @@
-# WGU Portfolio
+# Educational Development Team
