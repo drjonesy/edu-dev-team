@@ -8,7 +8,17 @@ Version control is a way to save multiple copies or versions of a file.
 
 https://www.atlassian.com/git/tutorials/what-is-version-control 
 
+
 ## Benefits
+
+- Make multiple copies/versions from the same file
+- Load the previous content from any save point
+- Compare two different versions without having save multiple physical copies
+- Can be applied to either a file or folder/directory of files.
+- Great way to track your changes.
+
+
+## Do I Really Need It?
 
 So why use version control? Let’s make this simple. When you’re on computer, tablet, or smart phone and you writing a paper on your favorite season, for example. You need to make sure you save your work, so it doesn’t get lost and you have to rewrite it all over again. 
 
@@ -32,6 +42,9 @@ By default, Office 365 comes packaged with version control but the default way o
 
 Instead, we recommend you use the Tracking Changes feature found in the Review menu. We recommend that for any file or document you plan to make even the smallest change that you enable Tracking Changes. 
 
+### A Folder
+
+Version Control isn't limited to one file at a time. You can actually use Version Control on a folder with many files and folder in it. There's even a feature that allows you to ignore certain files if you want.
 
 ### Google Drive and Docs
 
