@@ -42,7 +42,7 @@ By default, Office 365 comes packaged with version control but the default way o
 
 Instead, we recommend you use the Tracking Changes feature found in the Review menu. We recommend that for any file or document you plan to make even the smallest change that you enable Tracking Changes. 
 
-### A Folder
+### Multiple Files and Directories (folder)
 
 Version Control isn't limited to one file at a time. You can actually use Version Control on a folder with many files and folder in it. There's even a feature that allows you to ignore certain files if you want.
 
