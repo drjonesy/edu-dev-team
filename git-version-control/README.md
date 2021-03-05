@@ -69,6 +69,12 @@ Now unlike Google Drive and Microsoft Office 365 if we want to use version contr
 
 Now before we start jump into using version control on own device let’s see some common examples that exist today.
 
+### Google Drive and Docs
+
+    << INSERT VIDEO HERE >>
+
+Google Drive and Docs is a perfect example of version control. Because google is full of developers they implemented this feature from the beginning. You don’t need to enable anything, it’s just available. 
+
 ### Microsoft Word and Office 365
 
     << INSERT VIDEO HERE >>
@@ -83,8 +89,3 @@ Instead, we recommend you use the Tracking Changes feature found in the Review m
 
 Version Control isn't limited to one file at a time. You can actually use Version Control on a folder with many files and folder in it. There's even a feature that allows you to ignore certain files if you want.
 
-### Google Drive and Docs
-
-    << INSERT VIDEO HERE >>
-
-Google Drive and Docs is a perfect example of version control. Because google is full of developers they implemented this feature from the beginning. You don’t need to enable anything, it’s just available. 
