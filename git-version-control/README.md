@@ -59,6 +59,12 @@ Now unlike Google Drive and Microsoft Office 365 if we want to use version contr
 
 #### Windows
 
+    << INSERT VIDEO HERE >>
+
 #### Mac
 
+    << INSERT VIDEO HERE >>
+
 #### Linux
+
+    << INSERT VIDEO HERE >>
