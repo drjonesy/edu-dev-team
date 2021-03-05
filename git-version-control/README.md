@@ -87,5 +87,7 @@ Instead, we recommend you use the Tracking Changes feature found in the Review m
 
 ### Multiple Files and Directories (folder)
 
+    << INSERT VIDEO HERE >>
+
 Version Control isn't limited to one file at a time. You can actually use Version Control on a folder with many files and folder in it. There's even a feature that allows you to ignore certain files if you want.
 
