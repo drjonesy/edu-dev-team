@@ -28,31 +28,6 @@ But what if you are writing and you get to a point where you wanted a sentence o
 
 In version control we can go back to the beginning of the creation of the paper. When ever we save a version, it creates a copy of the file or paper and allows us to go back in history to grab content or undo from any point even if we closed the file a year ago. 
 
-## Examples
-
-Now before we start jump into using version control on own device let’s see some common examples that exist today.
-
-### Microsoft Word and Office 365
-
-    << INSERT VIDEO HERE >>
-
-Your first thought might be, wait didn’t you say we could use version control with this? If this was thought, I understand the cognitive, internal, relationship you made when reading the previous content. And you would be partially correct. 
-
-By default, Office 365 comes packaged with version control but the default way of accessing it can be difficult to use so we don’t recommend using the default option.
-
-Instead, we recommend you use the Tracking Changes feature found in the Review menu. We recommend that for any file or document you plan to make even the smallest change that you enable Tracking Changes. 
-
-### Multiple Files and Directories (folder)
-
-Version Control isn't limited to one file at a time. You can actually use Version Control on a folder with many files and folder in it. There's even a feature that allows you to ignore certain files if you want.
-
-### Google Drive and Docs
-
-    << INSERT VIDEO HERE >>
-
-Google Drive and Docs is a perfect example of version control. Because google is full of developers they implemented this feature from the beginning. You don’t need to enable anything, it’s just available. 
-
-
 
 ## Setup
 
@@ -84,3 +59,32 @@ Now unlike Google Drive and Microsoft Office 365 if we want to use version contr
 #### Linux
 
     << INSERT VIDEO HERE >>
+
+
+
+## GUI (Graphical User Interface) 
+
+
+## Examples
+
+Now before we start jump into using version control on own device let’s see some common examples that exist today.
+
+### Microsoft Word and Office 365
+
+    << INSERT VIDEO HERE >>
+
+Your first thought might be, wait didn’t you say we could use version control with this? If this was thought, I understand the cognitive, internal, relationship you made when reading the previous content. And you would be partially correct. 
+
+By default, Office 365 comes packaged with version control but the default way of accessing it can be difficult to use so we don’t recommend using the default option.
+
+Instead, we recommend you use the Tracking Changes feature found in the Review menu. We recommend that for any file or document you plan to make even the smallest change that you enable Tracking Changes. 
+
+### Multiple Files and Directories (folder)
+
+Version Control isn't limited to one file at a time. You can actually use Version Control on a folder with many files and folder in it. There's even a feature that allows you to ignore certain files if you want.
+
+### Google Drive and Docs
+
+    << INSERT VIDEO HERE >>
+
+Google Drive and Docs is a perfect example of version control. Because google is full of developers they implemented this feature from the beginning. You don’t need to enable anything, it’s just available. 
