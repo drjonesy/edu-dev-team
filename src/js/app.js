@@ -18,6 +18,9 @@ function cardTile(obj){
 // create new row
 // if n number of courses iterated create new row
 const body = document.querySelector('body');
+
+
+
 const blockCards = document.createElement("div");
 blockCards.id = "blockCards";
 blockCards.className = "container";
@@ -32,3 +35,11 @@ for(const obj in courses){
     cardRow.innerHTML += cardTile(courses[obj]);
 }
 
+body.innerHTML += "<div class='container px-10'>&nbsp;</div>";
+
+// REMOVE THIS CONTENT ONCE THE PLACEHOLDER IS CONVERTED TO HTML
+const placeholder = document.createElement("div");
+placeholder.className = "container";
+placeholder.innerHTML = `<img src="src/images/placeholder-home.png" alt="temp image">`;
+
+body.prepend(placeholder);
