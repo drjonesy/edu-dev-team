@@ -4,14 +4,14 @@
 
 function cardTile(obj){
     return `
-    <div class="col-sm">
+    
     <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="${obj.image}" alt="${obj.title}">
     <div class="card-body">
     <h5 class="card-title">${obj.title}</h5>
     <p class="card-text">${obj.desc}</p>
     <a href="${obj.courseURL}" class="btn btn-primary">View Micro-Course</a>
-    </div>
+    
     </div>`;
 }
 
@@ -24,7 +24,7 @@ const blockCards = document.createElement("div");
 blockCards.id = "blockCards";
 blockCards.className = "container";
 const cardRow = document.createElement("div");
-cardRow.className = "row";
+cardRow.className = "card-deck";
 
 // add elements
 body.prepend(blockCards);
