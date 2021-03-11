@@ -1,0 +1,12 @@
+.card {
+    min-width: 16em;
+    max-width: 18em;
+    margin-top: 30px;
+}
+
+/* Screen width less than 576 */
+@media only screen and (max-width: 576px) {
+    .card {
+        min-width: 100%;
+    }
+  }

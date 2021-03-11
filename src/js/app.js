@@ -5,13 +5,11 @@
 function cardTile(obj){
     return `
     
-    <div class="card" style="width: 18rem;">
+    <div class="card">
     <img class="card-img-top" src="${obj.image}" alt="${obj.title}">
     <div class="card-body">
-    <h5 class="card-title">${obj.title}</h5>
+    <p class="card-title"><a href="${obj.courseURL}">${obj.title}</a></p>
     <p class="card-text">${obj.desc}</p>
-    <a href="${obj.courseURL}" class="btn btn-primary">View Micro-Course</a>
-    
     </div>`;
 }
 
