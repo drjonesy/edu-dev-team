@@ -6,7 +6,7 @@ function cardTile(obj){
     return `
     
     <div class="card">
-    <img class="card-img-top" src="${obj.image}" alt="${obj.title}">
+    <a href="${obj.courseURL}"><img class="card-img-top" src="${obj.image}" alt="${obj.title}"></a>
     <div class="card-body">
     <p class="card-title"><a href="${obj.courseURL}">${obj.title}</a></p>
     <p class="card-text">${obj.desc}</p>
