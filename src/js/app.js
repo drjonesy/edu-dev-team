@@ -1,10 +1,34 @@
+// Created by Ryan Jones 3/12/2021
+// To use this template leave in the comments and creator line
 // This is a static website on GitHub Pages
 // Could not use pure pure JSON. Had to prepend: 'const courses =' 
 // This files assumes courses.js is imported before this script
 
+// Query Elements
+
+const body              =   document.querySelector('body');
+const navDiv            =   document.querySelector('#nav');
+const featureDiv        =   document.querySelector('#feature');
+const searchDiv         =   document.querySelector('#search');
+const cardsDiv          =   document.querySelector('#cards');
+const topMenu           =   document.querySelector('#menu');
+const videoContainer    =   document.querySelector('#videoContainer');
+const colNav            =   document.querySelector('#colNav');
+
+// generate menu navigation
+const linkHome  =   'http://www.edudevteam.com';
+const linkAbout =   'http://www.edudevteam.com/about.html';
+const navItems = '' +
+    `<a href="${linkHome}"><button class="btn btn-raised btn-secondary">home</button></a>
+    <a href="${linkAbout}"><button class="btn btn-raised btn-secondary">about</button></a>`;
+
+topMenu.innerHTML = navItems;
+
+
+
+// ==== FUNCTIONS
 function cardTile(obj){
-    return `
-    
+    return ` 
     <div class="card">
     <a href="${obj.courseURL}"><img class="card-img-top" src="${obj.image}" alt="${obj.title}"></a>
     <div class="card-body">
@@ -13,33 +37,97 @@ function cardTile(obj){
     </div>`;
 }
 
-
-// iterate over each course
-// create new row
-// if n number of courses iterated create new row
-const body = document.querySelector('body');
-
-
-
-const blockCards = document.createElement("div");
-blockCards.id = "blockCards";
-blockCards.className = "container";
-const cardRow = document.createElement("div");
-cardRow.className = "card-deck";
-
-// add elements
-body.prepend(blockCards);
-blockCards.append(cardRow);
-
-for(const obj in courses){
-    cardRow.innerHTML += cardTile(courses[obj]);
+function filterResults() {
+    for(const obj in courses){
+        cardsDiv.firstElementChild.firstElementChild.innerHTML += cardTile(courses[obj]);
+    }
 }
 
-body.innerHTML += "<div class='container px-10'>&nbsp;</div>";
+function responsiveVideo(videoURL) {
+    videoContainer.innerHTML = `<iframe class="video" src="${videoURL}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+}
 
-// REMOVE THIS CONTENT ONCE THE PLACEHOLDER IS CONVERTED TO HTML
-const placeholder = document.createElement("div");
-placeholder.className = "container";
-placeholder.innerHTML = `<img src="src/images/placeholder-home.png" alt="temp image">`;
+function loadVideo(url){
+    // clear current video
+    videoContainer.innerHTML = "";
+    // load clicked video
+    responsiveVideo(url);
+}
 
-body.prepend(placeholder);
+function buildColNav(count=0, obj="")  {
+    // for testings
+    if(count > 0){
+        for(let i = 1; i <= count; i += 1){
+            colNav.innerHTML += `<li id="nav_${i}">Link ${i}</li>`;
+        }
+    } else {
+        // load video links and apply loadVideo function
+        courses[`${obj}`]['videos'].forEach((video, i) => {
+            colNav.innerHTML += `<li id="videoLink_${i}">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> <span class="col-nav-text">${i+1}.  ${video['title']}</span>
+                </label>
+            </div>
+            </li>`;
+        });
+    }
+    
+    // set height and apply overflow-y:scroll if video links are greater than screen height
+    let screenHeight = window.innerHeight - navDiv.clientHeight;
+    if(colNav.clientHeight > screenHeight){
+        document.querySelector('.col-nav').style = `height: ${screenHeight - navDiv.clientHeight}px; overflow-y: scroll;`;
+    }
+
+}
+
+// Details Section on Course Page
+const overviewTab = document.querySelector('#overviewTab');
+const classroomTab = document.querySelector('#classroomTab');
+const announcementsTab = document.querySelector('#announcementsTab');
+
+const overviewContent = document.querySelector('#overviewContent');
+const classroomContent = document.querySelector('#classroomContent');
+const announcementsContent = document.querySelector('#announcementsContent');
+
+// functions
+
+function removeActiveTabsAll(){
+    for (const content of [overviewTab, classroomTab, announcementsTab]) {
+        content.classList.remove("bg-light", "text-dark");
+    }
+}
+
+function activeTab(htmlElement){
+    removeActiveTabsAll();
+    htmlElement.classList.add("bg-light", "text-dark");
+}
+
+function hideAllDetails() {
+    for (const content of [overviewContent, classroomContent, announcementsContent]) {
+        content.classList = 'd-none';
+    }
+}
+
+function showDetails(htmlElement){
+    htmlElement.classList = 'd-block';
+}
+
+// Event Listeners
+overviewTab.addEventListener('click', ()=>{
+    activeTab(overviewTab);
+    hideAllDetails();
+    showDetails(overviewContent);
+});
+
+classroomTab.addEventListener('click', ()=>{
+    activeTab(classroomTab);
+    hideAllDetails();
+    showDetails(classroomContent);
+});
+
+announcementsTab.addEventListener('click', ()=>{
+    activeTab(announcementsTab);
+    hideAllDetails();
+    showDetails(announcementsContent);
+});

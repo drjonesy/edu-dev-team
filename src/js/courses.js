@@ -4,7 +4,17 @@ const courses = {
         "title": "Git Version Control",
         "desc": "Software for tracking changes in any set of files.",
         "image": "src/images/git.png",
-        "courseURL": "git-version-control/README.md"
+        "courseURL": "git-version-control/index.html",
+        "videos": [
+            {
+                "title": "Downloading Git",
+                "url": "youtube.com/embed/..." 
+            },
+            {
+                "title": "Installing Git",
+                "url": "youtube.com/embed/..." 
+            }
+        ]
     },
     "codeorg": {
         "keywords": ["free", "programming", "code", "stem"],
