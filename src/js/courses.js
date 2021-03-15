@@ -9,11 +9,15 @@ const courses = {
         "videos": [
             {
                 "title": "Downloading Git",
-                "url": "youtube.com/embed/..." 
+                "url": "https://www.youtube.com/embed/2j7fD92g-gE" 
             },
             {
                 "title": "Installing Git",
-                "url": "youtube.com/embed/..." 
+                "url": "https://www.youtube.com/embed/TDpg2HHvKQQ." 
+            },
+            {
+                "title": "GUI Version Control",
+                "url": "https://www.youtube.com/embed/9Oa_c8_Ewpc" 
             }
         ]
     },

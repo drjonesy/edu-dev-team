@@ -54,6 +54,8 @@ function loadVideo(url){
     responsiveVideo(url);
 }
 
+
+
 function buildColNav(count=0, obj="")  {
     // for testings
     if(count > 0){
@@ -62,15 +64,27 @@ function buildColNav(count=0, obj="")  {
         }
     } else {
         // load video links and apply loadVideo function
-        courses[`${obj}`]['videos'].forEach((video, i) => {
+        const arr = courses[`${obj}`]['videos'];
+        // generate links
+        for(let i = 0; i < arr.length; i += 1){
             colNav.innerHTML += `<li id="videoLink_${i}">
             <div class="checkbox">
                 <label>
-                    <input type="checkbox"> <span class="col-nav-text">${i+1}.  ${video['title']}</span>
+                    <input type="checkbox" id="checkbox_${i}"> <span id="link_${i}" class="col-nav-text">${i+1}.  ${arr[i]['title']}</span>
                 </label>
             </div>
             </li>`;
-        });
+
+        };
+        // insert first video
+        loadVideo(arr[0]['url']);
+        // attach event handlers
+        for(let i = 0; i < arr.length; i += 1){
+            const textLink = document.querySelector(`#link_${i}`);
+            textLink.addEventListener('click', ()=>{
+                loadVideo(arr[i]['url']);
+            });
+        }
     }
     
     // set height and apply overflow-y:scroll if video links are greater than screen height
@@ -78,8 +92,11 @@ function buildColNav(count=0, obj="")  {
     if(colNav.clientHeight > screenHeight){
         document.querySelector('.col-nav').style = `height: ${screenHeight - navDiv.clientHeight}px; overflow-y: scroll;`;
     }
-
 }
+
+
+
+
 
 // Details Section on Course Page
 const overviewTab = document.querySelector('#overviewTab');
