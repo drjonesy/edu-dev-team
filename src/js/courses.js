@@ -3,6 +3,7 @@ const courses = {
         "keywords": ["free","version control", "automation", "stem", "tech", "git"],
         "title": "Git Version Control",
         "desc": "Software for tracking changes in any set of files.",
+        "details": "Learn how to track, review, and rollback to almost any change made to a file or folder. Git Version Control is free software and comes preconfigured with tools like Microsoft Office and Google Docs.",
         "image": "src/images/git.png",
         "courseURL": "git-version-control/index.html",
         "videos": [

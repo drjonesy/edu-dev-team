@@ -90,8 +90,11 @@ const overviewContent = document.querySelector('#overviewContent');
 const classroomContent = document.querySelector('#classroomContent');
 const announcementsContent = document.querySelector('#announcementsContent');
 
-// functions
+const courseAbout = document.querySelector('#courseAbout');
+const courseCat = document.querySelector('#courseCat');
+const courseDesc = document.querySelector('#courseDesc');
 
+// functions
 function removeActiveTabsAll(){
     for (const content of [overviewTab, classroomTab, announcementsTab]) {
         content.classList.remove("bg-light", "text-dark");
@@ -113,7 +116,16 @@ function showDetails(htmlElement){
     htmlElement.classList = 'd-block';
 }
 
-// Event Listeners
+// functions that display conent from courses.js
+function addContent(htmlElement, obj, descriptor) {
+    let content = courses[obj][descriptor];
+    if(content instanceof Array){
+        content = content.map(x => ' ' + x);
+    }
+    htmlElement.innerHTML += `<p>${content}</p>`;
+}
+
+// Event Listeners that affect CSS
 overviewTab.addEventListener('click', ()=>{
     activeTab(overviewTab);
     hideAllDetails();

@@ -40,7 +40,18 @@
                           </ul>
                         <!-- ============== Content ============== -->
                         <!-- Overview -->
-                        <div id="overviewContent" class="d-block">Overview</div>
+                        <div id="overviewContent" class="d-block">
+                            <div class="p-3">
+                                <h4 style="font-weight: bolder;">About this course</h4>
+                                <div id="courseAbout"></div>
+                            </div>
+                            <div class="border border-2"></div>
+                            <div class="p-3">
+                                <h6>Categories</h6>
+                                <div id="courseCat"></div>
+                            </div>
+                            <div class="border border-2"></div>
+                        </div>
                         <!-- Classroom -->
                         <div id="classroomContent" class="d-none">Classroom</div>
                         <!-- Announcements -->
@@ -68,6 +79,8 @@
 <script>
     responsiveVideo("https://www.youtube.com/embed/l6veMGLpol0"); // placeholder
     buildColNav(0, 'git');
+    addContent(courseAbout, 'git', 'details');
+    addContent(courseCat, 'git', 'keywords');
 </script>
 
 </body> <!-- BODY  END-->
