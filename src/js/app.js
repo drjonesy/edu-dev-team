@@ -80,7 +80,7 @@ function buildColNav(count=0, obj="")  {
         loadVideo(arr[0]['url']);
         // attach event handlers
         for(let i = 0; i < arr.length; i += 1){
-            const textLink = document.querySelector(`#link_${i}`);
+            const textLink = document.querySelector(`#checkbox_${i}`);
             textLink.addEventListener('click', ()=>{
                 loadVideo(arr[i]['url']);
             });
