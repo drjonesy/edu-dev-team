@@ -50,7 +50,32 @@
     border-bottom: .214rem solid;
 }
 
+.rounded-btn {
+    border: none;
+    border-radius: 2em;
+    padding: .7em 2.5em;
+    box-shadow: 0 .06em 0.1em 0 rgb(180, 180, 180);
+}
+.rounded-btn:hover {
+    cursor: pointer;
+}
+.nav-margin {
+    margin: .5em 1em;
+}
+.bg-pink {
+    background-color: #DA4FEA;
+}
+.bg-violet {
+    background-color: #984FEA;
+}
+.bg-light-blue {
+    background-color: #4FC1EA;
+}
 
+/* button hovers */
+.btn-hover:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+}
 
 /* Screen width less than 576 */
 @media only screen and (max-width: 576px) {

@@ -19,8 +19,8 @@ const colNav            =   document.querySelector('#colNav');
 const linkHome  =   'http://www.edudevteam.com';
 const linkAbout =   'http://www.edudevteam.com/about.html';
 const navItems = '' +
-    `<a href="${linkHome}"><button class="btn btn-raised btn-secondary">home</button></a>
-    <a href="${linkAbout}"><button class="btn btn-raised btn-secondary">about</button></a>`;
+    `<a href="${linkHome}"><button class="rounded-btn bg-pink text-white nav-margin btn-hover">home</button></a>
+    <a href="${linkAbout}"><button class="rounded-btn bg-violet text-white nav-margin btn-hover">about</button></a>`;
 
 topMenu.innerHTML = navItems;
 
