@@ -39,8 +39,10 @@ function cardTile(obj){
 
 
 // Load all tiles by default
-for(const obj in courses){
-    cardsDiv.firstElementChild.firstElementChild.innerHTML += cardTile(courses[obj]);
+function loadAllResults(){
+    for(const obj in courses){
+        cardsDiv.firstElementChild.firstElementChild.innerHTML += cardTile(courses[obj]);
+    }
 }
 
 const cat = document.querySelector('#filterByCat');
@@ -191,7 +193,7 @@ function showDetails(htmlElement){
     htmlElement.classList = 'd-block';
 }
 
-// functions that display conent from courses.js
+// functions that display content from courses.js
 function addContent(htmlElement, obj, descriptor) {
     let content = courses[obj][descriptor];
     if(content instanceof Array){
@@ -199,3 +201,4 @@ function addContent(htmlElement, obj, descriptor) {
     }
     htmlElement.innerHTML += `<p>${content}</p>`;
 }
+
