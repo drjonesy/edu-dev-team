@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 p-0">
-                    <div id="videoContainer" class="video-container"></div>
+                    <div id="videoContainer" class="video-container ratio ratio-16x9"></div>
                     <div class="details-section">
                         <!-- Overview | Classroom | Announcments -->
                         <ul class="nav nav-tabs light-border">
@@ -53,9 +53,22 @@
                             <div class="border border-2"></div>
                         </div>
                         <!-- Classroom -->
-                        <div id="classroomContent" class="d-none">Classroom</div>
+                        <div id="classroomContent" class="d-none">
+                            <div class="p-3">
+                                <h4 style="font-weight: bolder;">In The Classroom</h4>
+                                <p>This section contains links for students and teachers to important sites and documents.</p>
+                                <div id="syllabus"></div>
+                            </div>
+                            <div class="border border-2"></div>
+                        </div>
                         <!-- Announcements -->
-                        <div id="announcementsContent" class="d-none">Announcements</div>
+                        <div id="announcementsContent" class="d-none">
+                            <div class="p-3">
+                                <div class="alert alert-info" role="alert">
+                                    Use this section to learn about updates and changes to the course.
+                                  </div>
+                            </div>
+                            <div class="border border-2"></div></div>
                     </div>
                 </div>
                 <div class="col-lg-4 light-border p-0">
@@ -81,6 +94,7 @@
     buildColNav(0, 'git');
     addContent(courseAbout, 'git', 'details');
     addContent(courseCat, 'git', 'keywords');
+    addContent()
 </script>
 
 </body> <!-- BODY  END-->

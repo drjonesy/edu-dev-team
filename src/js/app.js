@@ -44,7 +44,7 @@ function filterResults() {
 }
 
 function responsiveVideo(videoURL) {
-    videoContainer.innerHTML = `<iframe class="video" src="${videoURL}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+    videoContainer.innerHTML = `<iframe class="video" src="${videoURL}" allowfullscreen></iframe>`
 }
 
 function loadVideo(url){
