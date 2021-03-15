@@ -25,6 +25,7 @@ const courses = {
         "keywords": ["free", "programming", "code", "stem"],
         "title": "Intro to Coding",
         "desc": "A free and fun way to learning computer science.",
+        "details":"",
         "image": "src/images/code-org.png",
         "courseURL": "code-org/README.md"
     },
@@ -32,6 +33,7 @@ const courses = {
         "keywords": ["free", "cad", "3d", "stem", "model", "design", "3d printing", "electronics"],
         "title": "Start Tinkering in 3D",
         "desc": "Bring your 3D thoughts to life using this free simple CAD tool.",
+        "details":"",
         "image": "src/images/tinkercad.png",
         "courseURL": "tinkercad/README.md"
     },
@@ -39,6 +41,7 @@ const courses = {
         "keywords": ["free", "code", "3d", "stem", "program", "design", "mac", "ios", "apple", "swift"],
         "title": "Swift Playgrounds",
         "desc": "Learn to code swift with this 3D interactive puzzle game.",
+        "details":"",
         "image": "src/images/swift-playgrounds.png",
         "courseURL": "swift-playgrounds/README.md"
     }

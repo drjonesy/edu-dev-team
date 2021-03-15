@@ -15,11 +15,18 @@
 <!-- BODY OPEN-->
 <body lang="en">
     <div class="container" id="page-bg">  <!-- PAGE BG-->
-    <div id="nav">
-        <div class="container">
-            <ul class="nav justify-content-end nav-pills" id="menu"></ul>
+        <div id="nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="../src/images/edt-logo.png" alt="Educational Development Team Logo" style="max-height: 4em;" class="float-left">
+                    </div>
+                    <div class="col-md-9">
+                        <ul class="nav justify-content-end nav-pills" id="menu"></ul>
+                    </div>
+                </div> 
+            </div>
         </div>
-    </div>
     <div id="feature">
         <div class="container">
             <div class="row">
@@ -93,6 +100,25 @@
     buildColNav(0, 'git');
     addContent(courseAbout, 'git', 'details');
     addContent(courseCat, 'git', 'keywords');
+
+    // Event Listeners that affect CSS
+    overviewTab.addEventListener('click', ()=>{
+        activeTab(overviewTab);
+        hideAllDetails();
+        showDetails(overviewContent);
+    });
+
+    classroomTab.addEventListener('click', ()=>{
+        activeTab(classroomTab);
+        hideAllDetails();
+        showDetails(classroomContent);
+    });
+
+    announcementsTab.addEventListener('click', ()=>{
+        activeTab(announcementsTab);
+        hideAllDetails();
+        showDetails(announcementsContent);
+    });
 </script>
 
 </body> <!-- BODY  END-->

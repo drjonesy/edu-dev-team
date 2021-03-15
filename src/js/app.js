@@ -37,11 +37,69 @@ function cardTile(obj){
     </div>`;
 }
 
-function filterResults() {
-    for(const obj in courses){
-        cardsDiv.firstElementChild.firstElementChild.innerHTML += cardTile(courses[obj]);
-    }
+
+// Load all tiles by default
+for(const obj in courses){
+    cardsDiv.firstElementChild.firstElementChild.innerHTML += cardTile(courses[obj]);
 }
+
+const cat = document.querySelector('#filterByCat');
+
+function filterResults() {
+    let keywords = [];
+    // loop through all course keywords and create a set
+    for(const obj in courses){
+        keywords += courses[obj]['keywords'] + ",";
+    }
+    // create a new set
+    keywords = new Set(keywords.split(',').sort());
+    keywords.delete("");
+    // build drop-down options
+    keywords.forEach(keyword => {
+        cat.innerHTML += `<option value="${keyword}">${keyword}</option>`;
+    });
+    
+    // add change event handler when drop value changes
+    cat.addEventListener('change', ()=>{
+        let value = cat.value;
+        cardsDiv.firstElementChild.firstElementChild.innerHTML = ""; // clear results
+        if(value === 'default'){
+            for(const obj in courses){
+                cardsDiv.firstElementChild.firstElementChild.innerHTML += cardTile(courses[obj]);
+            }
+        } else {
+            for(const obj in courses){
+                if(courses[obj]['keywords'].includes(value)) {
+                    cardsDiv.firstElementChild.firstElementChild.innerHTML += cardTile(courses[obj]);
+                }
+            }
+        }
+    });
+}
+
+const search = document.querySelector('#search');
+
+function searchBy(){
+    search.addEventListener('change', ()=>{
+        let value = search.value;
+        cardsDiv.firstElementChild.firstElementChild.innerHTML = ""; // clear results
+        if(value === ""){
+            for(const obj in courses){
+                cardsDiv.firstElementChild.firstElementChild.innerHTML += cardTile(courses[obj]);
+            }
+        } else {
+            for(const obj in courses){
+                if(courses[obj]['title'].toLowerCase().includes(value.toLowerCase()) 
+                || courses[obj]['desc'].toLowerCase().includes(value.toLowerCase())
+                || courses[obj]['keywords'].toString().includes(value.toLowerCase())
+                ) {
+                    cardsDiv.firstElementChild.firstElementChild.innerHTML += cardTile(courses[obj]);
+                }
+            }
+        }
+    });
+}
+
 
 function responsiveVideo(videoURL) {
     videoContainer.innerHTML = `<iframe class="video" src="${videoURL}" allowfullscreen></iframe>`
@@ -70,7 +128,7 @@ function buildColNav(count=0, obj="")  {
             colNav.innerHTML += `<li id="videoLink_${i}">
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="checkbox_${i}"> <span id="link_${i}" class="col-nav-text">${i+1}.  ${arr[i]['title']}</span>
+                    <input type="checkbox" id="checkbox_${i}"> <span id="link_${i}" class="col-nav-text text-secondary">${i+1}.  ${arr[i]['title']}</span>
                 </label>
             </div>
             </li>`;
@@ -141,22 +199,3 @@ function addContent(htmlElement, obj, descriptor) {
     }
     htmlElement.innerHTML += `<p>${content}</p>`;
 }
-
-// Event Listeners that affect CSS
-overviewTab.addEventListener('click', ()=>{
-    activeTab(overviewTab);
-    hideAllDetails();
-    showDetails(overviewContent);
-});
-
-classroomTab.addEventListener('click', ()=>{
-    activeTab(classroomTab);
-    hideAllDetails();
-    showDetails(classroomContent);
-});
-
-announcementsTab.addEventListener('click', ()=>{
-    activeTab(announcementsTab);
-    hideAllDetails();
-    showDetails(announcementsContent);
-});
