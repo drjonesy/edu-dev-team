@@ -18,9 +18,7 @@
     <div id="nav">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
-                    <img src="src/images/edt-logo.png" alt="Educational Development Team Logo" style="max-height: 4em;" class="float-left">
-                </div>
+                <div class="col-md-3" id="logo"></div>
                 <div class="col-md-9">
                     <ul class="nav justify-content-end nav-pills" id="menu"></ul>
                 </div>
@@ -79,6 +77,7 @@
 <script src="src/js/courses.js"></script>
 <script src="src/js/app.js"></script>
 <script>
+    addLogo();
     loadAllResults();
     searchBy();
     filterResults();
