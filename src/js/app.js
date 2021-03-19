@@ -29,12 +29,6 @@ topMenu.innerHTML = navItems;
 
 
 // ==== FUNCTIONS
-// add logo
-function addLogo(path=""){
-    const logo = document.querySelector('#logo');
-    logo.innerHTML = `<a href="edudevteam.com">
-                        <img src="${path}src/images/edt-logo.png" alt="Educational Development Team Logo" style="max-height: 4em;" class="float-left" /></a>`;
-}
 
 function cardTile(obj){
     return ` 
