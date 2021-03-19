@@ -54,6 +54,11 @@
                             </div>
                             <div class="border border-2"></div>
                             <div class="p-3">
+                                <h6>Additional Resources</h6>
+                                <div id="resourceLinks"></div>
+                            </div>
+                            <div class="border border-2"></div>
+                            <div class="p-3">
                                 <h6>Categories</h6>
                                 <div id="courseCat"></div>
                             </div>
@@ -101,6 +106,7 @@
     buildColNav(0, 'git');
     // Fill Tabs with Content
     addContent(courseAbout, 'git', 'details');
+    addResourceLinks('git', 'btn btn-outline-info px-2 py-1 mx-1');
     addContent(courseCat, 'git', 'keywords');
     // Event Listeners that affect CSS
     overviewTab.addEventListener('click', ()=>{

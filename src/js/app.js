@@ -194,11 +194,28 @@ function showDetails(htmlElement){
 }
 
 // functions that display content from courses.js
-function addContent(htmlElement, obj, descriptor) {
+function addContent(htmlElement, obj, descriptor, css="") {
     let content = courses[obj][descriptor];
     if(content instanceof Array){
-        content = content.map(x => ' ' + x);
+        for (let i=0; i < content.length; i += 1 ) {
+            htmlElement.innerHTML += `<span class="${css}">${content[i]}</span>`;
+            if(i < content.length -1){
+                htmlElement.innerHTML += ', ';
+            }
+        }
+    } else {
+        htmlElement.innerHTML += `<p class="${css}">${content}</p>`;
     }
-    htmlElement.innerHTML += `<p>${content}</p>`;
+    
 }
 
+
+// add Additional Resource Links
+// Do not provide a comma for the last link
+function addResourceLinks(obj, css="", ){
+    const resourceLinks = document.querySelector('#resourceLinks');
+    const resources = courses[obj]['resources'];
+    for (let i=0; i < resources.length; i += 1) {
+        resourceLinks.innerHTML += `<a class="${css}" href="${resources[i]['url']}" target="blank">${resources[i]['text']}</a>`;
+    }
+}
