@@ -33,7 +33,7 @@
     border-bottom: solid .05rem  #e6e6e6;
     padding: .7em 1em;
 }
-.col-nav>ul li:hover {
+.col-nav>ul li:hover, label:hover {
     cursor: pointer;
 } 
 .col-nav>ul li:last-child {
