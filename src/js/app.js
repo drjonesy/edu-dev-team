@@ -168,7 +168,7 @@ const announcementsTab = document.querySelector('#announcementsTab');
 
 const overviewContent = document.querySelector('#overviewContent');
 const classroomContent = document.querySelector('#classroomContent');
-const announcementsContent = document.querySelector('#announcementsContent');
+const updatesContent = document.querySelector('#updatesContent');
 
 const courseAbout = document.querySelector('#courseAbout');
 const courseCat = document.querySelector('#courseCat');
@@ -187,7 +187,7 @@ function activeTab(htmlElement){
 }
 
 function hideAllDetails() {
-    for (const content of [overviewContent, classroomContent, announcementsContent]) {
+    for (const content of [overviewContent, classroomContent, updatesContent]) {
         content.classList = 'd-none';
     }
 }
@@ -220,5 +220,19 @@ function addResourceLinks(obj, css="", ){
     const resources = courses[obj]['resources'];
     for (let i=0; i < resources.length; i += 1) {
         resourceLinks.innerHTML += `<a class="${css}" href="${resources[i]['url']}" target="blank">${resources[i]['text']}</a>`;
+    }
+}
+
+
+// add updates and announcements
+function addUpdates(htmlElement, obj) {
+    const updates = courses[obj]['updates'];
+    for(let i=0; i < updates.length; i += 1){
+        htmlElement.innerHTML += `
+        <div class="px-4">
+            <span class="block updateDate">${updates[i]['date']}</span>
+            <span class="block updateTitle">${updates[i]['title']}</span>
+            <span class="block updateDetails">${updates[i]['details']}</span>
+        </div>`;
     }
 }

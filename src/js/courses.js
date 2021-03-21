@@ -1,5 +1,12 @@
 const courses = {
     "git": {
+        "updates":[
+            {
+                "date": "3/20/2021",
+                "title": "Placeholder Data",
+                "details": "All links are temporary placeholders. Content is currently not available."
+            }
+        ],
         "keywords": ["free","version control", "git"],
         "title": "Git Version Control",
         "desc": "Software for tracking changes in any set of files.",
@@ -12,22 +19,94 @@ const courses = {
             {
                 "text": "Source Tree",
                 "url": "https://www.sourcetreeapp.com/"
+            },
+            {
+                "text": "Office 365",
+                "url": "https://www.office.com/"
+            },
+            {
+                "text": "Google Docs",
+                "url": "https://www.google.com/docs/about/"
             }
         ],
         "image": "src/images/git.png",
         "courseURL": "git-version-control/index.html",
         "videos": [
             {
-                "title": "Downloading Git",
+                "title": "What is Version Control",
                 "url": "https://www.youtube.com/embed/2j7fD92g-gE" 
             },
             {
-                "title": "Installing Git",
-                "url": "https://www.youtube.com/embed/TDpg2HHvKQQ." 
+                "title": "What is Git",
+                "url": "" 
             },
             {
-                "title": "GUI Version Control",
-                "url": "https://www.youtube.com/embed/9Oa_c8_Ewpc" 
+                "title": "Downloading Git",
+                "url": "" 
+            },
+            {
+                "title": "Installing Git",
+                "url": "" 
+            },
+            {
+                "title": "git init (command line)",
+                "url": "" 
+            },
+            {
+                "title": "Save Changes",
+                "url": "" 
+            },
+            {
+                "title": "View History",
+                "url": "" 
+            },
+            {
+                "title": "View Previous Saves",
+                "url": "" 
+            },
+            {
+                "title": "GUI (Graphical User Interface)",
+                "url": "" 
+            },
+            {
+                "title": "What is SourceTree",
+                "url": "" 
+            },
+            {
+                "title": "Downloading SourceTree",
+                "url": "" 
+            },
+            {
+                "title": "Installing SourceTree",
+                "url": "" 
+            },
+            {
+                "title": "SourceTree - git init",
+                "url": "" 
+            },
+            {
+                "title": "SourceTree - Save Changes",
+                "url": "" 
+            },
+            {
+                "title": "SourceTree - View Previous Saves",
+                "url": "" 
+            },
+            {
+                "title": "What is GitHub",
+                "url": "" 
+            },
+            {
+                "title": "Uploading files to GitHub",
+                "url": "" 
+            },
+            {
+                "title": "Microsoft Office - Version Control",
+                "url": "" 
+            },
+            {
+                "title": "Google Docs - Version Control",
+                "url": "" 
             }
         ]
     },

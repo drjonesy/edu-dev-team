@@ -76,13 +76,7 @@
                             <div class="border border-2"></div>
                         </div>
                         <!-- Announcements -->
-                        <div id="announcementsContent" class="d-none">
-                            <div class="p-3">
-                                <div class="alert alert-info" role="alert">
-                                    Use this section to learn about updates and changes to the course.
-                                  </div>
-                            </div>
-                            <div class="border border-2"></div></div>
+                        <div id="updatesContent" class="d-none"></div>
                     </div>
                 </div>
                 <div class="col-lg-4 light-border p-0">
@@ -109,6 +103,7 @@
     // Fill Tabs with Content
     addContent(courseAbout, 'git', 'details');
     addResourceLinks('git', 'btn btn-outline-info px-2 py-1 mx-1');
+    addUpdates(updatesContent, 'git'); //announcements
     addContent(courseCat, 'git', 'keywords');
     // Event Listeners that affect CSS
     overviewTab.addEventListener('click', ()=>{
@@ -126,7 +121,7 @@
     announcementsTab.addEventListener('click', ()=>{
         activeTab(announcementsTab);
         hideAllDetails();
-        showDetails(announcementsContent);
+        showDetails(updatesContent);
     });
     
 </script>

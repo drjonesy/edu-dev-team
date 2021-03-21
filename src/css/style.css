@@ -72,6 +72,22 @@
     background-color: #4FC1EA;
 }
 
+/* Announcments and Updates CSS */
+.block {display: block;}
+.updateDate {
+    font-size: medium;
+    font-weight: 500;
+    border-bottom:rgb(180, 180, 180) solid .1em;
+    border-top:rgb(226, 226, 226) solid .1em;
+    margin-top: 1em;
+}
+.updateTitle {
+    font-size: x-large;
+    font-weight: 300;
+}
+.updateDetails {
+    font-weight: 400;
+}
 
 /* button hovers */
 .btn-hover:hover {
