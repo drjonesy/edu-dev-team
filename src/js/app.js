@@ -31,23 +31,44 @@ topMenu.innerHTML = navItems;
 // ==== FUNCTIONS
 
 function cardTile(obj){
-    return ` 
-    <div class="card">
-    <a href="${obj.courseURL}"><img class="card-img-top" src="${obj.image}" alt="${obj.title}"></a>
-    <div class="card-body">
-    <p class="card-title"><a href="${obj.courseURL}">${obj.title}</a></p>
-    <p class="card-text">${obj.desc}</p>
-    </div>`;
+    let card = '';
+    card += `<div class="card">`;
+    let imgString = `<img class="card-img-top" src="${obj.image}" alt="${obj.title}">`;
+    card += isEnabled(obj,`<a href="${obj.courseURL}">${imgString}</a>`, `${imgString}`);
+    card += `<div class="card-body">`;
+    card += `<p class="card-title">`;
+    card += isEnabled(obj,`<a href="${obj.courseURL}">${obj.title}</a>`, `${obj.title}`);
+    card += `</p>`;
+    card += `<p class="card-text">${obj.desc}</p>`;
+    card += `</div>`;
+    return card;
+}
+
+// Disabled Cards Functionality
+// removes all card hyperlinks if status === 'disabled'
+function isEnabled(obj, trueHTML, falseHTML){
+    let html = trueHTML;
+    if(obj['enabled'] === 'true'){
+        html = trueHTML;
+    }else {
+        html = falseHTML;
+    }
+    return html;
 }
 
 
 // Load all tiles by default
 function loadAllResults(){
     for(const obj in courses){
-        cardsDiv.firstElementChild.firstElementChild.innerHTML += cardTile(courses[obj]);
+        let el = cardTile(courses[obj])
+        cardsDiv.firstElementChild.firstElementChild.innerHTML += el;
+        
     }
 }
 
+
+
+// Filter By Category  Functionality
 const cat = document.querySelector('#filterByCat');
 
 function filterResults() {
@@ -82,6 +103,9 @@ function filterResults() {
     });
 }
 
+
+
+// Search Function
 const search = document.querySelector('#search');
 
 function searchBy(){

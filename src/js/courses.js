@@ -1,5 +1,6 @@
 const courses = {
     "git": {
+        "enabled": "true",
         "updates":[
             {
                 "date": "3/20/2021",
@@ -111,6 +112,7 @@ const courses = {
         ]
     },
     "codeorg": {
+        "enabled": "false",
         "keywords": ["free", "code"],
         "title": "Intro to Coding",
         "desc": "A free and fun way to learning computer science.",
@@ -119,6 +121,7 @@ const courses = {
         "courseURL": "code-org/README.md"
     },
     "tinkercad": {
+        "enabled": "false",
         "keywords": ["free", "cad", "3D modeling"],
         "title": "Start Tinkering in 3D",
         "desc": "Bring your 3D thoughts to life using this free simple CAD tool.",
@@ -127,6 +130,7 @@ const courses = {
         "courseURL": "tinkercad/README.md"
     },
     "swiftplaygrounds": {
+        "enabled": "false",
         "keywords": ["free", "code", "apple", "swift"],
         "title": "Swift Playgrounds",
         "desc": "Learn to code swift with this 3D interactive puzzle game.",
