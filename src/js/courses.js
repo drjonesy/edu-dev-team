@@ -9,7 +9,7 @@ const courses = {
             }
         ],
         "image": "src/images/git.png",
-        "courseURL": "git-version-control/course.html",
+        "courseURL": "courses/git-version-control/course.html",
         "keywords": ["free","version control", "git"],
         "title": "Git Version Control",
         "desc": "Software for tracking changes in any set of files.",
