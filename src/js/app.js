@@ -34,10 +34,10 @@ function cardTile(obj){
     let card = '';
     card += `<div class="card">`;
     let imgString = `<img class="card-img-top" src="${obj.image}" alt="${obj.title}">`;
-    card += isEnabled(obj,`<a href="${obj.courseURL}">${imgString}</a>`, `${imgString}`);
+    card += isCardEnabled(obj,`<a href="${obj.courseURL}">${imgString}</a>`, `${imgString}`);
     card += `<div class="card-body">`;
     card += `<p class="card-title">`;
-    card += isEnabled(obj,`<a href="${obj.courseURL}">${obj.title}</a>`, `${obj.title}`);
+    card += isCardEnabled(obj,`<a href="${obj.courseURL}">${obj.title}</a>`, `${obj.title}`);
     card += `</p>`;
     card += `<p class="card-text">${obj.desc}</p>`;
     card += `</div>`;
@@ -46,7 +46,7 @@ function cardTile(obj){
 
 // Disabled Cards Functionality
 // removes all card hyperlinks if status === 'disabled'
-function isEnabled(obj, trueHTML, falseHTML){
+function isCardEnabled(obj, trueHTML, falseHTML){
     let html = trueHTML;
     if(obj['enabled'] === 'true'){
         html = trueHTML;
