@@ -143,7 +143,7 @@ function loadVideo(url){
 
 
 
-function buildColNav(count=0, obj="")  {
+function buildColNav(obj="", count=0)  {
     // for testings
     if(count > 0){
         for(let i = 1; i <= count; i += 1){
