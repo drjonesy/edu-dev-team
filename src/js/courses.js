@@ -1,6 +1,12 @@
 const courses = {
     "git": {
         "enabled": "true",
+        "image": "src/images/git.png",
+        "courseURL": "courses/git-version-control/course.html",
+        "keywords": ["free","version control", "git"],
+        "title": "Git Version Control",
+        "desc": "Software for tracking changes in any set of files.",
+        "details": "Learn how to track, review, and rollback to almost any change made to a file or folder. Git Version Control is free software and comes preconfigured with tools like Microsoft Office and Google Docs.",
         "updates":[
             {
                 "date": "3/20/2021",
@@ -8,12 +14,6 @@ const courses = {
                 "details": "All links are temporary placeholders. Content is currently not available."
             }
         ],
-        "image": "src/images/git.png",
-        "courseURL": "courses/git-version-control/course.html",
-        "keywords": ["free","version control", "git"],
-        "title": "Git Version Control",
-        "desc": "Software for tracking changes in any set of files.",
-        "details": "Learn how to track, review, and rollback to almost any change made to a file or folder. Git Version Control is free software and comes preconfigured with tools like Microsoft Office and Google Docs.",
         "resources":[
             {
                 "text": "git",
@@ -118,7 +118,10 @@ const courses = {
         "desc": "A free and fun way to learning computer science.",
         "details":"",
         "image": "src/images/code-org.png",
-        "courseURL": "code-org/README.md"
+        "courseURL": "code-org/README.md",
+        "updates": [],
+        "resources": [],
+        "videos": [],
     },
     "tinkercad": {
         "enabled": "false",
@@ -127,7 +130,10 @@ const courses = {
         "desc": "Bring your 3D thoughts to life using this free simple CAD tool.",
         "details":"",
         "image": "src/images/tinkercad.png",
-        "courseURL": "tinkercad/README.md"
+        "courseURL": "tinkercad/README.md",
+        "updates": [],
+        "resources": [],
+        "videos": [],
     },
     "swiftplaygrounds": {
         "enabled": "false",
@@ -136,6 +142,9 @@ const courses = {
         "desc": "Learn to code swift with this 3D interactive puzzle game.",
         "details":"",
         "image": "src/images/swift-playgrounds.png",
-        "courseURL": "swift-playgrounds/README.md"
+        "courseURL": "swift-playgrounds/README.md",
+        "updates": [],
+        "resources": [],
+        "videos": [],
     }
 }
