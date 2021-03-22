@@ -8,6 +8,8 @@ const courses = {
                 "details": "All links are temporary placeholders. Content is currently not available."
             }
         ],
+        "image": "src/images/git.png",
+        "courseURL": "git-version-control/course.html",
         "keywords": ["free","version control", "git"],
         "title": "Git Version Control",
         "desc": "Software for tracking changes in any set of files.",
@@ -30,8 +32,6 @@ const courses = {
                 "url": "https://www.google.com/docs/about/"
             }
         ],
-        "image": "src/images/git.png",
-        "courseURL": "git-version-control/index.html",
         "videos": [
             {
                 "title": "What is Version Control",
