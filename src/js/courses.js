@@ -42,17 +42,5 @@ const courses = {
         "updates": [],
         "resources": [],
         "videos": [],
-    },
-    "tinkercad": {
-        "enabled": "true",
-        "keywords": ["free", "3D", "CAD"],
-        "title": "Start Tinkering in 3D",
-        "desc": "A free and fun way to learning computer science.",
-        "details":"This is the detailed section about the course. You can put as much or as little information as you like.",
-        "image": "src/images/tinkercad.png",
-        "courseURL": "courses/tinkercad/course.html",
-        "updates": [],
-        "resources": [],
-        "videos": [],
-    },  
+    } 
 }
