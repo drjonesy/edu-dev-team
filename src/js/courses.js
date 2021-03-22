@@ -51,32 +51,8 @@ const courses = {
         "details":"This is the detailed section about the course. You can put as much or as little information as you like.",
         "image": "src/images/tinkercad.png",
         "courseURL": "courses/tinkercad/course.html",
-        "updates": [
-            {
-                "date": "3/22/2021",
-                "title": "Placeholder Data",
-                "details": "This should describe the update..."
-            }
-        ],
-        "resources": [
-            {
-                "text": "tinkercad",
-                "url": "https://www.tinkercad.com/"
-            },
-            {
-                "text": "autodesk",
-                "url": "https://www.autodesk.com/"
-            },
-        ],
-        "videos": [
-            {
-                "title": "Welcome",
-                "url": "https://www.youtube.com/embed/60xfIu-lqAs"
-            },
-            {
-                "title": "What is CAD",
-                "url": "https://www.youtube.com/embed/igKq9ORkcHc"
-            },
-        ],
+        "updates": [],
+        "resources": [],
+        "videos": [],
     },  
 }
