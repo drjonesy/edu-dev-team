@@ -35,80 +35,80 @@ const courses = {
         "videos": [
             {
                 "title": "What is Version Control",
-                "url": "https://www.youtube.com/embed/2j7fD92g-gE" 
+                "url": "https://www.youtube.com/embed/4Ucrt8r-urQ" 
             },
             {
                 "title": "What is Git",
-                "url": "" 
+                "url": "https://www.youtube.com/embed/O5cuHIp7F0Q" 
             },
             {
-                "title": "Downloading Git",
-                "url": "" 
+                "title": "Downloading Git for Windows",
+                "url": "https://www.youtube.com/embed/WOAGKMKH_k" 
             },
             {
-                "title": "Installing Git",
-                "url": "" 
+                "title": "Installing Git for Windows",
+                "url": "https://www.youtube.com/embed/0vox82aiYEw" 
             },
-            {
-                "title": "git init (command line)",
-                "url": "" 
-            },
-            {
-                "title": "Save Changes",
-                "url": "" 
-            },
-            {
-                "title": "View History",
-                "url": "" 
-            },
-            {
-                "title": "View Previous Saves",
-                "url": "" 
-            },
-            {
-                "title": "GUI (Graphical User Interface)",
-                "url": "" 
-            },
-            {
-                "title": "What is SourceTree",
-                "url": "" 
-            },
-            {
-                "title": "Downloading SourceTree",
-                "url": "" 
-            },
-            {
-                "title": "Installing SourceTree",
-                "url": "" 
-            },
-            {
-                "title": "SourceTree - git init",
-                "url": "" 
-            },
-            {
-                "title": "SourceTree - Save Changes",
-                "url": "" 
-            },
-            {
-                "title": "SourceTree - View Previous Saves",
-                "url": "" 
-            },
-            {
-                "title": "What is GitHub",
-                "url": "" 
-            },
-            {
-                "title": "Uploading files to GitHub",
-                "url": "" 
-            },
-            {
-                "title": "Microsoft Office - Version Control",
-                "url": "" 
-            },
-            {
-                "title": "Google Docs - Version Control",
-                "url": "" 
-            }
+            // {
+            //     "title": "git init (command line)",
+            //     "url": "" 
+            // },
+            // {
+            //     "title": "Save Changes",
+            //     "url": "" 
+            // },
+            // {
+            //     "title": "View History",
+            //     "url": "" 
+            // },
+            // {
+            //     "title": "View Previous Saves",
+            //     "url": "" 
+            // },
+            // {
+            //     "title": "GUI (Graphical User Interface)",
+            //     "url": "" 
+            // },
+            // {
+            //     "title": "What is SourceTree",
+            //     "url": "" 
+            // },
+            // {
+            //     "title": "Downloading SourceTree",
+            //     "url": "" 
+            // },
+            // {
+            //     "title": "Installing SourceTree",
+            //     "url": "" 
+            // },
+            // {
+            //     "title": "SourceTree - git init",
+            //     "url": "" 
+            // },
+            // {
+            //     "title": "SourceTree - Save Changes",
+            //     "url": "" 
+            // },
+            // {
+            //     "title": "SourceTree - View Previous Saves",
+            //     "url": "" 
+            // },
+            // {
+            //     "title": "What is GitHub",
+            //     "url": "" 
+            // },
+            // {
+            //     "title": "Uploading files to GitHub",
+            //     "url": "" 
+            // },
+            // {
+            //     "title": "Microsoft Office - Version Control",
+            //     "url": "" 
+            // },
+            // {
+            //     "title": "Google Docs - Version Control",
+            //     "url": "" 
+            // }
         ]
     },
     "codeorg": {

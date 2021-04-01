@@ -39,7 +39,7 @@ function cardTile(obj){
     card += `<p class="card-title">`;
     card += isCardEnabled(obj,`<a href="${obj.courseURL}">${obj.title}</a>`, `${obj.title}`);
     card += `</p>`;
-    card += `<p class="card-text">${obj.desc}</p>`;
+    card += isCardEnabled(obj, `<p class="card-text">${obj.desc}</p>`, `<h4 class="text-muted"><em>Coming soon...</em></h4>`);
     card += `</div>`;
     return card;
 }
