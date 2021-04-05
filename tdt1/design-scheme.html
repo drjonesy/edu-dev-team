@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WGU | E-Portfolio Resources</title>
+    <!-- Material Design for Bootstrap fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <!-- Material Design for Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.1/font/bootstrap-icons.min.css">
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="../src/css/style.css">
+</head>
+<!-- BODY OPEN-->
+<body lang="en">
+    <div class="container" id="page-bg"><!-- PAGE BG-->
+    <section id="nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="http://www.edudevteam.com">
+                        <img id="logo" src="../src/images/edt-logo.png" alt="Educational Development Team Logo" style="max-height: 4em;" class="float-left" />
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <ul class="nav justify-content-end nav-pills" id="menu"></ul>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <!-- Start Design Scheme -->
+    <section id="content">
+        <div class="p-3"></div>
+        <h3><a href="./index.html"><i class="bi bi-arrow-bar-left"></i> BACK</a></h3>
+        <section id="design-scheme">
+            <div class="p-3"></div>
+            <div class="container">
+                <h2 class="font-weight-bold">Design Scheme</h2>
+                <div class="p-2"></div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <!-- HTML & CSS Frameworks -->
+                        <h4><u>HTML &amp; CSS Frameworks</u></h4>
+                        <ul>
+                            <li>(External) <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">https://getbootstrap.com/</a></li>
+                            <li>(External) <a href="https://mdbootstrap.github.io/bootstrap-material-design/" target="_blank" rel="noopener noreferrer">https://mdbootstrap.github.io/bootstrap-material-design/</a></li>
+                            <li>(Internal) <a href="../src/css/style.css" target="_blank" rel="noopener noreferrer">..src/css/style.css</a></li>
+                        </ul>
+                        <!-- Topography -->
+                        <div class="p-4"></div>
+                        <h4><u>Topography</u></h4>
+                        
+                        <p><a href="https://mdbootstrap.github.io/bootstrap-material-design/docs/4.0/content/typography/" target="_blank" rel="noopener noreferrer">https://mdbootstrap.github.io/bootstrap-material-design/docs/4.0/content/typography/</a></p>
+
+                        <h1 class="px-4">Heading 1</h1>
+                        <h4 class="px-4">Heading 4</h4>
+                        <h6 class="px-4">Heading 6</h6>
+                        <p class="px-4">Paragraph</p>
+                        
+                       
+                        
+                        <!-- ELEMENTS -->
+                        <div class="p-4"></div>
+                        <h4><u>Elements</u></h4>
+                        <p>Key elements used in the design of the website</p>
+                        <table class="table table-borderless">
+                            <tbody>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Element</th>
+                                    <th scope="col">Description</th>
+                                </tr>
+                            </thead>
+                            <!-- Buttons -->
+                                <tr>
+                                    <td>
+                                        <button class="rounded-btn bg-pink text-white nav-margin btn-hover">button</button>
+                                        <button class="rounded-btn bg-violet text-white nav-margin btn-hover">button</button>
+                                        <button class="rounded-btn bg-light-blue btn-lg text-white nav-margin btn-hover">button</button>
+                                        <a class="btn btn-outline-info px-2 py-1 mx-1" href="#" target="blank">additional resource<div class="ripple-container"></div></a>
+                                    </td>
+                                    <td>
+                                        <p><strong>Buttons</strong></p>
+                                        <p>Includes styles from both Bootstrap Material Design and Internal CSS</p>
+                                        <p><a href="https://mdbootstrap.github.io/bootstrap-material-design/docs/4.0/bootstrap-components/buttons/" target="_blank" rel="noopener noreferrer">https://mdbootstrap.github.io/bootstrap-material-design/docs/4.0/bootstrap-components/buttons/</a></p>
+                                    </td>
+                              </tr>
+                              <!-- Search Filters -->
+                              <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="search" aria-describedby="search" placeholder="search">
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="custom-select" id="filterByCat">
+                                            <option value="default">-- Show All --</option>
+                                        </select>
+                                    </div>
+                                    </td>
+                                    <td>
+                                        <p><strong>Filter Forms</strong></p>
+                                        <p>Included on homepage. Filters course results by either keyword search or category selection.</p>
+                                        <p><a href="https://mdbootstrap.github.io/bootstrap-material-design/docs/4.0/bootstrap-components/forms/" target="_blank">https://mdbootstrap.github.io/bootstrap-material-design/docs/4.0/bootstrap-components/forms/</a></p>
+                                    </td>
+                                </tr>
+                                <!-- CARDS -->
+                                <tr>
+                                    <td>
+                                        <div class="card"><a href="#"><img class="card-img-top" src="../src/images/course-preview-placeholder.png" alt="..."></a><div class="card-body"><p class="card-title"><a href="#">Course Title</a></p><p class="card-text">Breif course description pulled from database.</p></div></div>
+                                    </td>
+                                    <td>
+                                        <p><strong>Course Card Tile</strong></p>
+                                        <p>Included on homepage. Each course title is generated using JavaScript. The card data is stored in JSON (JavaScript Object Notation) object.</p>
+                                        <p>This includes the image, title, description, and link to course page.</p>
+                                        <p><a target="_blank" href="https://getbootstrap.com/docs/5.0/components/card/">https://getbootstrap.com/docs/5.0/components/card/</a></p>
+                                    </td>
+                                </tr>
+                                <!-- Video -->
+                                <tr>
+                                    <td>
+                                        <div id="videoContainer" class="video-container"><iframe class="video" src="https://www.youtube.com/embed/4Ucrt8r-urQ" allowfullscreen=""></iframe></div>
+                                    </td>
+                                    <td>
+                                        <p><strong>Embedded Video</strong></p>
+                                        <p>The embeded video is loaded from the JSON (JavaScript Object Notation) database using JavaScript functionality. The CSS applied is custom internal css. The video is loaded using YouTubes embed feature.</p>
+                                        <p><a href="https://support.google.com/youtube/answer/171780?hl=en" target="_blank" rel="noopener noreferrer">https://support.google.com/youtube/answer/171780?hl=en</a></p>
+                                    </td>
+                                </tr>
+                                <!-- Video Links with Checkbox -->
+                                <tr>
+                                    <td>
+                                            <span class="bmd-form-group is-filled"><div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" id="checkbox_0"><span class="checkbox-decorator"><span class="check"></span></span> <span id="link_0" class="col-nav-text text-secondary">Video Link</span>
+                                                </label>
+                                            </div></span>
+                                    </td>
+                                    <td>
+                                        <p><strong>Video Links with Checkbox</strong></p>
+                                        <p>The course videos are auto generated using JavaScript with JSON (JavaScript Object Notation). This is combination of a &lt;li> element &lt;/li> and checkboxes.</p>
+                                        <p><a href="https://mdbootstrap.github.io/bootstrap-material-design/docs/4.0/material-design/selections/#checkboxes" target="_blank" rel="noopener noreferrer">https://mdbootstrap.github.io/bootstrap-material-design/docs/4.0/material-design/selections/#checkboxes</a></p>
+                                </tr>
+                                <!-- Tabs -->
+                                <tr>
+                                    <td>
+                                        <ul class="nav nav-tabs light-border">
+                                            <li class="nav-item">
+                                              <a id="tab1" class="nav-link bg-light text-dark" href="#tab1">Tab 1<div class="ripple-container"></div></a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a id="tab2" class="nav-link" href="#tab2">Tab 2</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a id="tab3" class="nav-link" href="#tab3">Tab 3</a>
+                                              </li>
+                                          </ul>
+                                    </td>
+                                    <td>
+                                        <p><strong>Tabs</strong></p>
+                                        <p>The tabs on each course page include: overview, classroom, and  announcments.</p>
+                                        <p><a href="https://getbootstrap.com/docs/5.0/components/navs-tabs/" target="_blank" rel="noopener noreferrer">https://getbootstrap.com/docs/5.0/components/navs-tabs/
+                                </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            <!-- END CONTAINER -->
+            </div>
+        </section>
+
+    </section>
+   
+    </div> <!-- END PAGE BG-->
+<!-- Bootstrap Material Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+<!-- ADDITIONAL CUSTOM SCRIPTS  -->
+<!-- <script src="src/js/courses.js"></script> -->
+<script src="../src/js/app.js"></script>
+
+
+</body> <!-- BODY  END-->
+</html>

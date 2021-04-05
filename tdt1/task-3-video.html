@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WGU | E-Portfolio Resources</title>
+    <!-- Material Design for Bootstrap fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <!-- Material Design for Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.1/font/bootstrap-icons.min.css">
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="../src/css/style.css">
+</head>
+<!-- BODY OPEN-->
+<body lang="en">
+    <div class="container" id="page-bg"><!-- PAGE BG-->
+    <section id="nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="http://www.edudevteam.com">
+                        <img id="logo" src="../src/images/edt-logo.png" alt="Educational Development Team Logo" style="max-height: 4em;" class="float-left" />
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <ul class="nav justify-content-end nav-pills" id="menu"></ul>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <!-- Start Design Scheme -->
+    <section id="content">
+        <div class="p-3"></div>
+        <h3><a href="./index.html"><i class="bi bi-arrow-bar-left"></i> BACK</a></h3>
+        <div class="p-3"></div>
+        <!-- Video -->
+        <section id="s1">
+            <div class="container">
+                <h2 class="font-weight-bold">Task 3 Video</h2>
+                <div class="p-2"></div>
+                <section id="video">
+                    <blockquote class="blockquote">You can view more videos by clicking on of the available micro-courses on the homepage.</blockquote>
+                    <a href="http://www.edudevteam.com" target="_blank" rel="noopener noreferrer">EduDevTeam.com</a>
+                    <div class="p-2"></div>
+
+                    <p>Download: <a href="./files/tdt1-task3.pdf" target="_blank" rel="noopener noreferrer">Task 3 Assignment - PDF</a></p>
+                    <div class="p-4"></div>
+                    <div id="videoContainer" class="video-container"><iframe class="video" src="https://www.youtube.com/embed/4Ucrt8r-urQ" allowfullscreen=""></iframe></div>
+                    
+                </section>
+            </div><!-- END CONTAINER -->
+        </section>
+        <!-- TUTORIAL -->
+        <section id="s2">
+            <div class="container">
+                <div class="p-4"></div>
+                <h2 class="font-weight-bold">Video Editing Process</h2>
+                <div class="p-2"></div>
+
+                <p>To produce the videos, I first drafted the a generalize document breaking up the topic of Git version control into smaller sections that were short enough to keep the attention of an average viewer. Next, a draft of content is written up as a guide for myself when I am creating the recorded video screen capture.</p>
+
+                <ol>
+                    <li>Once the draft is to a point that is clear and concise the next step for the production of the micro course is to spin up a virtual environment using Virtual Box. Virtual box is tool that allows a user to create virtual operating system in a window use it like you would any other operating system. For the downloading and installation videos I created fresh copies of Windows, Mac, and Linux to guide beginners in the videos.</li>
+                    <li>After the Virtual Environment is running, I then open my video screen capture software Snagit by Techsmith. Using Snagit an exact capture of the virtual operating system is framed within the Virtual Box software only showing the operating system.</li>
+                    <li>It’s time to begin recording. I click the on the record button to capture the tutorial. Once done, I click the stop button. The video loads into the Snagit preview editor allowing me to review any issues and allows me to make minor edits. The video is then saved.</li>
+                    <li>Next, an intro graphic is created using the Affinity Designer by Serif. The graphic color and layout are defined for the entire micro-course giving each video a simple relationship to that micro-course. The graphic is then exported to a PNG.</li>
+                    <li>Now the video and graphic are opened with the Shot Cut video editing software. The image is placed in front and at the end of the video. The video is then re-exported to a compressed MPG format.</li>
+                    <li>Next the video is uploaded to YouTube and placed within its micro-course group.</li>
+                    <li>After uploading is complete, it is linked in the EduDevTeam.com website course page.</li>
+                </ol>
+
+                <h4>Version Control Software</h4>
+                <ul>
+                    <li>Snagit was used to record the screen capture</li>
+                    <li>Power Point was used to define the videos with slides</li>
+                    <li>VirtualBox was used to create fresh virtual copies of Windows, Mac, and Linux so I could effectively guide the learner as if I was on a machine that had never installed any development tools.</li>
+                    <li>YouTube is where the videos are hosted</li>
+                    <li>Affinity Design to create the video intro screens</li>
+                    <li>Shot Cut Video Editing software to add in intro screens at the start and end of each video.</li>
+                    <li>Videos are then loaded back into the EduDevTeam.com website using JavaScript.</li>
+
+                </ul>
+
+                <h4>Conceptual Framework</h4>
+                <h6><u>Process of Development</u></h6>
+                <img src="./images/flowchart.png" alt="" class="img-fluid" />
+
+
+                <h6><u>Benefits of the design and structure</u></h6>
+                <p>The flowchart above effectively describes the process of producing a video for the micro-course. The key points to focus on are stages 1 and 2 which cover importance of breaking up the tutorial into smaller sections. This a key factor used to keep the learner’s attention and allow them to pace themselves. This thought is further supported in stages 5 and 6. Stage 5 emphasizes the max time limit. Two minutes is ideal, but three minutes is still acceptable. There will be times when the max time limit cannot be matched, and this will be pointed out within the instruction. Stage 6 is the content review. In this stage I may either clip out sections of content or I may re-record the entire video multiple times until it meets my standards of understanding.</p>
+                
+                <p>To effectively tie all the sections within a micro-course together an intro cover template is created. Once designed, each video will retain the colors and look of the template. The only change will be the text. After the cover is exported as an image, the tutorial and cover image are imported in the Shot Cut video editing software. The cover placed in front of the tutorial video on the video timeline and exported as a .mp4 file ready for YouTube.</p>
+                <p>The video is then uploaded to my YouTube channel and placed within a playlist to match the micro-course title. </p>
+                <p>Finally, the video is referenced within website and made available on the websites micro-course page dynamically.</p>
+
+                <div style="float: right;"><h1><a href="#page-bg"><i class="bi bi-arrow-up-square bi-lg"></i></a></h1></div>
+            </div><!-- END CONTAINER -->
+        </section><!-- END Section 2 -->
+
+
+        
+        
+    </section>
+   
+    </div> <!-- END PAGE BG-->
+<!-- Bootstrap Material Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+<!-- ADDITIONAL CUSTOM SCRIPTS  -->
+<!-- <script src="src/js/courses.js"></script> -->
+<script src="../src/js/app.js"></script>
+
+
+</body> <!-- BODY  END-->
+</html>

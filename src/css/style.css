@@ -97,6 +97,57 @@
     box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
 }
 
+
+/* CODE BLOCK CSSS */
+.json, .js {
+    color: rgb(233, 189, 93);
+}
+.js var {
+    font-weight: bold;
+    font-style: normal;
+    color: rgb(93, 212, 233);
+}
+.html {
+    color: rgb(133, 233, 93);
+}
+.markdown {
+    color: rgb(216, 216, 216);
+}
+
+
+.codeblock {
+    background-color: #181818;
+    padding: 1em;
+    margin: 1em 0;
+    font-weight: lighter;
+    border-radius: .3em;
+    font-size: .9rem;
+    overflow-x: scroll;
+}
+.codeblock span {
+    display: block;
+}
+
+.codeblock em {
+    color: rgb(255, 255, 255);
+    font-style: normal;
+}
+
+.codeblock .tab1 {
+    padding-left: 1em;
+}
+.codeblock .tab2 {
+    padding-left: 3em;
+}
+.codeblock .tab3 {
+    padding-left: 5em;
+}
+.codeblock .tab4 {
+    padding-left: 7em;
+}
+
+
+
 /* Screen width less than 576 */
 @media only screen and (max-width: 576px) {
     .card {
