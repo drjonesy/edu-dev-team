@@ -102,7 +102,7 @@
 .json, .js {
     color: rgb(233, 189, 93);
 }
-.js var {
+.json var, .js var {
     font-weight: bold;
     font-style: normal;
     color: rgb(93, 212, 233);

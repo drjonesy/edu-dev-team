@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WGU | E-Portfolio Resources</title>
+    <!-- Material Design for Bootstrap fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <!-- Material Design for Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.1/font/bootstrap-icons.min.css">
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="../src/css/style.css">
+</head>
+<!-- BODY OPEN-->
+<body lang="en">
+    <div class="container" id="page-bg"><!-- PAGE BG-->
+    <section id="nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="http://www.edudevteam.com">
+                        <img id="logo" src="../src/images/edt-logo.png" alt="Educational Development Team Logo" style="max-height: 4em;" class="float-left" />
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <ul class="nav justify-content-end nav-pills" id="menu"></ul>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <!-- Start Design Scheme -->
+    <section id="content">
+        <div class="p-3"></div>
+        <h3><a href="./index.html"><i class="bi bi-arrow-bar-left"></i> BACK</a></h3>
+        <div class="p-3"></div>
+        <!-- Video -->
+        <section id="s1">
+            <div class="container">
+                <h2 class="font-weight-bold">What is a database</h2>
+                <div class="p-2"></div>
+                <section id="about">
+                    <blockquote class="blockquote m-4">
+                        <p class="mb-0">A database is an organized collection of structured information, or data, typically stored electronically in a computer system.</p>
+                        <footer class="blockquote-footer">Oracle - <cite title="Source Title"><a href="https://www.oracle.com/database/what-is-database/" target="_blank" rel="noopener noreferrer">What is a Database?</a></cite></footer>
+                    </blockquote>
+                    
+                    <p>Based on Oracle's description of a database we have vast number of solutions that can be used as database. This ranges from text files, Spreadsheets, to fully hosted solutions that use MySQL, SQL, JSON, and NoSQL and beyond.</p>
+                </section>
+
+                <section id="database">
+                    <div class="py-4"></div>
+                    <h4 class="font-weight-bold">My Databse Example</h4>
+                    <p>I've linked to my existing JSON database on GitHub for this site.</p>
+                    <p><strong>URL:</strong> <a href="https://raw.githubusercontent.com/drjonesy/edu-dev-team/main/src/js/courses.js" target="_blank" rel="noopener noreferrer">JSON Database</a></p>
+
+                </section>
+
+                <section id="code">
+                    <div class="py-4"></div>
+                    <h4 class="font-weight-bold">JSON Database Explained</h4>
+                    <p>For my website I relied on a JSON (JavaScript Object Notation) formatted database. Using this database format I was able to store all the course content within it including references to images and video. JSON is not limited JavaScript development only but definitely helps with development.</p>
+
+                    <p>If you aren't familiar with the JSON style of datbase I've included samples.</p>
+                    <p>The codeblock below provides a basic overview of how JSON works. The root of JSON is wrapped in curly brackes. These curly brackets define the entire database as an object. Within the object we nest <strong>key:value</strong> pairs. Using JavaScript I can call the key and return the value.</p>
+                    <div class="codeblock json">
+                        <span class="tab1">{</span>
+                        <span class="tab2">    "key" : <em>"value"</em></span>
+                        <span class="tab1">}</span>
+                    </div>
+                    <p>JSON isn't limited to only <strong>key:value</strong> string pairs. It can also store numbers, booleans of true and false, arrays, and additional objects.</p>
+
+                    <div class="codeblock json">
+                        <span class="tab1">{</span>
+                        <span class="tab2">    "users":</span>
+                        <span class="tab2">    [</span>
+                        <span class="tab3">        "uid_1012":</span>
+                        <span class="tab3">        {</span>
+                        <span class="tab4">            "name": <em>"john"</em>,</span>
+                        <span class="tab4">            "email": <em>"john@gmail.com"</em>,</span>
+                        <span class="tab4">            "age": <em>24</em>,</span>
+                        <span class="tab4">            "premier":<em> false</em>,</span>
+                        <span class="tab3">        },</span>
+                        <span class="tab2">    ]</span>
+                        <span class="tab1">}</span>
+                    </div>
+
+                    <p>In the example above, we've included an array [] as key and even nested an additional object {} as a key for the user "uid_1012". If you not a programmer this probably looks confusing. So let's break it down.</p>
+                    <ol>
+                        <li>From the top we have the entire json object wrapped in the curly brackets. {} - you can see these at the top and bottom.</li>
+                        <li>Directly within the curly brackets we have the keyword: <strong>"users"</strong>. This references an array of users. We've only listed one user: <strong>"uid_1012"</strong></li>
+                        <li>If you're not familiar with arrays, we'll keep it simple. It's basically a list.</li>
+                        <li>Now let's focus on the user key of <strong>"uid_1012"</strong>. The value for this key is a new object with multiple <strong>key:value</strong> pairs separated by a comma.</li>
+                        <li>In JavaScript we can get the users name doing the following...</li>
+                    </ol>
+
+                    <div class="codeblock js">
+                        <span>const <var>name</var> = <em>users</em>[0]<em>.name</em>;</span>
+                    </div>
+
+                    <p>The zero 0 in the line references the first user in the array. Coding arrays (lists) start at 0.</p>
+                    
+                </section>
+            </div><!-- END CONTAINER -->
+        </section>
+        
+
+
+        
+        
+    </section>
+   
+    </div> <!-- END PAGE BG-->
+<!-- Bootstrap Material Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+<!-- ADDITIONAL CUSTOM SCRIPTS  -->
+<!-- <script src="src/js/courses.js"></script> -->
+<script src="../src/js/app.js"></script>
+
+
+</body> <!-- BODY  END-->
+</html>
