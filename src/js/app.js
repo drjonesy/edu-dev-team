@@ -179,15 +179,18 @@ function buildColNav(obj="", count=0)  {
 
 
 
-
 // Details Section on Course Page
 const overviewTab = document.querySelector('#overviewTab');
 const classroomTab = document.querySelector('#classroomTab');
 const announcementsTab = document.querySelector('#announcementsTab');
+// --- only display on tablet or smaller screens
+const videosTab = document.querySelector('#videosTab');
 
 const overviewContent = document.querySelector('#overviewContent');
 const classroomContent = document.querySelector('#classroomContent');
 const updatesContent = document.querySelector('#updatesContent');
+// --- only display on tablet or smaller screens
+const videosContent = document.querySelector('#videosContent');
 
 const courseAbout = document.querySelector('#courseAbout');
 const courseCat = document.querySelector('#courseCat');
@@ -195,14 +198,14 @@ const courseDesc = document.querySelector('#courseDesc');
 
 // functions
 function removeActiveTabsAll(){
-    for (const content of [overviewTab, classroomTab, announcementsTab]) {
-        content.classList.remove("bg-light", "text-dark");
+    for (const content of [overviewTab, classroomTab, announcementsTab, videosTab]) {
+        content.classList.remove("active");
     }
 }
 
 function activeTab(htmlElement){
     removeActiveTabsAll();
-    htmlElement.classList.add("bg-light", "text-dark");
+    htmlElement.classList.add("active");
 }
 
 function hideAllDetails() {

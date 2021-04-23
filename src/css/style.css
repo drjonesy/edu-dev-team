@@ -74,6 +74,39 @@ body {
     border-bottom: .214rem solid;
 }
 
+/* =============================
+COURSE PAGE TABS
+===================================*/
+
+.course-tabs ul {
+    list-style-type: none;
+    padding: 0;
+    border: solid 1px #e6e6e6;
+}
+.course-tabs ul li {
+    display: inline-block;
+    padding: 1.6vw 1vw 1.3vw;
+    text-transform: uppercase;
+    font-size: .9rem;   
+    border-bottom: .214rem solid transparent;
+}
+.course-tabs ul li:hover {
+    cursor: pointer;
+    border-bottom: .214rem solid #ebebeb;
+}
+.course-tabs ul li.active {
+    background-color: #f5f5f5;
+}
+.course-tabs ul li.active:hover{
+    border-bottom: .214rem solid #f5f5f5;
+}
+
+.course-tabs ul li>a {
+    color: #424242;
+    text-decoration: none;
+}
+
+
 .rounded-btn {
     border: none;
     border-radius: 2em;
@@ -181,12 +214,25 @@ body {
     .text-right {
         text-align: unset !important;
     }
+
 }
 
 /* Screen width less than 576 */
 @media only screen and (max-width: 576px) {
     .card {
         min-width: 100%;
+    }
+    .course-tabs ul {
+        padding: 0;
+        border: none;
+    }
+    .course-tabs ul li { 
+        padding: 3vw 5vw;
+        margin: 1vw .5vw; 
+        border: solid 1px #e6e6e6;
+    }
+    .course-tabs .active {
+        /* border-bottom: .214rem solid #bcc9d4; */
     }
 }
 

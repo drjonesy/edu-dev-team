@@ -23,17 +23,15 @@
                     <div id="videoContainer" class="video-container"></div>
                     <div class="details-section">
                         <!-- Overview | Classroom | Announcments -->
-                        <ul class="nav nav-tabs light-border">
-                            <li class="nav-item" >
-                              <a id="overviewTab" class="nav-link bg-light text-dark" href="#overview">Overview</a>
-                            </li>
-                            <li class="nav-item">
-                              <a id="classroomTab" class="nav-link" href="#classroom">Classroom</a>
-                            </li>
-                            <li class="nav-item">
-                              <a id="announcementsTab" class="nav-link" href="#announcements">Announcments</a>
-                            </li>
-                          </ul>
+                        <!-- Custom TABS -->
+                        <div class="course-tabs mt-2">
+                            <ul>
+                                <li id="overviewTab" class="active"><a href="#overview">Overview</a></li>
+                                <li id="classroomTab"><a href="#classroom">Classroom</a></li>
+                                <li id="announcementsTab"><a href="#announcements">Announcements</a></li>
+                                <li id="videosTab" class="d-lg-none" ><a href="#videos">Videos</a></li>
+                            </ul>
+                        </div>
                         <!-- ============== Content ============== -->
                         <!-- Overview -->
                         <div id="overviewContent" class="d-block px-2">
@@ -64,6 +62,8 @@
                         </div>
                         <!-- Announcements -->
                         <div id="updatesContent" class="d-none px-2"></div>
+                        <!-- Videos -->
+                        <div id="videosContent" class="d-none px-2"></div>
                         
                     </div>
                 </div>
@@ -113,6 +113,12 @@
         activeTab(announcementsTab);
         hideAllDetails();
         showDetails(updatesContent);
+    });
+
+    videosTab.addEventListener('click', ()=>{
+        activeTab(videosTab);
+        hideAllDetails();
+        showDetails(videosContent);
     });
     
 </script>
