@@ -135,15 +135,18 @@ function loadVideo(url){
     // load clicked video
     responsiveVideo(url);
 }
+/* ==========================
+--- CUSTOM CHECKBOXES
+============================= */
 
 function checkBox(){
     const cbox = document.querySelectorAll('.cbox i');
     for(const iElement of cbox){
         iElement.addEventListener('click', ()=>{
             if(iElement.classList.contains('bi-square') ){
-                iElement.className = 'bi bi-check-square-fill'
+                iElement.className = 'bi bi-check-square-fill text-success'
             } else {
-                iElement.className = 'bi bi-square';
+                iElement.className = 'bi bi-square text-secondary';
             }
         });
     }
@@ -163,7 +166,7 @@ function buildVideoContent(element, obj="", count=0)  {
         // generate links -- NEED CUSTOM CHECK BOX
         for(let i = 0; i < arr.length; i += 1) {
             htmlElement.innerHTML += `<li id="videoLink_${i}">
-                <span class="cbox"><i class="bi bi-square"></i></span>
+                <span class="cbox"><i class="bi bi-square text-secondary" style="font-size: 1.3rem;"></i></span>
                 <span id="checkbox_${i}" class="col-nav-text text-secondary">${i+1}.  ${arr[i]['title']}</span>
             </li>`;
 
