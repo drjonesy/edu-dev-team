@@ -60,12 +60,14 @@ body {
 }
 
 .checkbox label .checkbox-decorator {
-    margin: -0.6em;
-    
+    margin-top: -1.2rem;
 }
 
 .col-nav-text {
     padding-left: 1em;
+}
+.col-nav-text:hover {
+    cursor: pointer;
 }
 
 .nav-tabs .nav-link.active > .ripple-container{

@@ -149,12 +149,11 @@ function buildColNav(obj="", count=0)  {
         // load video links and apply loadVideo function
         const arr = courses[`${obj}`]['videos'];
         // generate links
-        for(let i = 0; i < arr.length; i += 1){
+        for(let i = 0; i < arr.length; i += 1) {
             colNav.innerHTML += `<li id="videoLink_${i}">
             <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="checkbox_${i}"> <span id="link_${i}" class="col-nav-text text-secondary">${i+1}.  ${arr[i]['title']}</span>
-                </label>
+                <label><input type="checkbox" /></label>
+                <span id="checkbox_${i}" class="col-nav-text text-secondary">${i+1}.  ${arr[i]['title']}</span>
             </div>
             </li>`;
 
