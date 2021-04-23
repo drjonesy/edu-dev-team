@@ -1,7 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Knewave&effect=shadow-multiple');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+body {
+    font-family: 'Oxygen', sans-serif;
+}
+
 #page-bg {
     background-color: rgb(255, 255, 255);
     padding-bottom: 2rem;
 }
+.nav-white {
+    background-color:  rgb(255, 255, 255);
+    box-shadow: none;
+    padding: 0;
+}
+.logo, .logo>a {
+    height: 7vh;
+    color:#f86b1a;
+    font-family: 'Knewave', serif;
+}
+
+
 .card {
     min-width: 16em;
     max-width: 18em;
@@ -146,7 +165,18 @@
     padding-left: 7em;
 }
 
-
+/* screen width >= 767 */
+@media only screen and (max-width: 767px) {
+    .logo-border{
+        display: block;
+        width: 100vw;
+        height: .7vh;
+        background-color: #fca776;
+    }
+    .mobile-nav button {
+        margin-left: 0;
+    }
+}
 
 /* Screen width less than 576 */
 @media only screen and (max-width: 576px) {

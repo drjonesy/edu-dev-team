@@ -18,11 +18,7 @@ const colNav            =   document.querySelector('#colNav');
 // generate menu navigation
 const linkHome  =   'http://www.edudevteam.com';
 const linkAbout =   'http://www.edudevteam.com/about.html';
-const navItems = '' +
-    `<a href="${linkHome}"><button class="rounded-btn bg-pink text-white nav-margin btn-hover">home</button></a>
-    <a href="${linkAbout}"><button class="rounded-btn bg-violet text-white nav-margin btn-hover">about</button></a>`;
 
-topMenu.innerHTML = navItems;
 
 
 
@@ -109,7 +105,7 @@ function filterResults() {
 const search = document.querySelector('#search');
 
 function searchBy(){
-    search.addEventListener('change', ()=>{
+    search.addEventListener('keyup', ()=>{
         let value = search.value;
         cardsDiv.firstElementChild.firstElementChild.innerHTML = ""; // clear results
         if(value === ""){
@@ -259,4 +255,10 @@ function addUpdates(htmlElement, obj) {
             <span class="block updateDetails">${updates[i]['details']}</span>
         </div>`;
     }
+}
+
+
+// add HTML to Element
+function insertHTML(htmlElement, html) {
+    document.querySelector(htmlElement).innerHTML = html;
 }
