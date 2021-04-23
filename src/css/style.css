@@ -76,6 +76,15 @@ Course Videos List
     border-bottom: .214rem solid;
 }
 
+#clearSearch {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size:large;
+}
+#clearSearch:hover{
+    cursor: pointer;
+}
 
 
 /* =============================
@@ -131,6 +140,19 @@ COURSE PAGE TABS
 }
 .bg-light-blue {
     background-color: #4FC1EA;
+}
+
+.text-pink {
+    color: #DA4FEA;
+}
+.text-violet {
+    color: #984FEA;
+}
+.text-light-blue {
+    color: #4FC1EA;
+}
+.text-light-gray {
+    color:rgb(180, 180, 180);
 }
 
 /* Announcments and Updates CSS */

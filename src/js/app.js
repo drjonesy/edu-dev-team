@@ -62,6 +62,12 @@ function loadAllResults(){
 }
 
 
+// clear course results
+
+function clearCourseResults(){
+    cardsDiv.firstElementChild.firstElementChild.innerHTML = ""; // clear results
+}
+
 
 // Filter By Category  Functionality
 const cat = document.querySelector('#filterByCat');
@@ -83,7 +89,8 @@ function filterResults() {
     // add change event handler when drop value changes
     cat.addEventListener('change', ()=>{
         let value = cat.value;
-        cardsDiv.firstElementChild.firstElementChild.innerHTML = ""; // clear results
+        clearCourseResults();// clear results
+        
         if(value === 'default'){
             for(const obj in courses){
                 cardsDiv.firstElementChild.firstElementChild.innerHTML += cardTile(courses[obj]);
@@ -99,8 +106,12 @@ function filterResults() {
 }
 
 
+/* =====================================
+----- Search Function
+========================================*/
 
-// Search Function
+
+
 const search = document.querySelector('#search');
 
 function searchBy(){
@@ -123,6 +134,17 @@ function searchBy(){
         }
     });
 }
+
+// Clear Search Button
+const clearSearch = document.querySelector('#clearSearch');
+clearSearch.addEventListener('click', ()=>{
+    // clear field and return all results
+    clearCourseResults(); // clear results
+    search.value = "";
+    for(const obj in courses){
+        cardsDiv.firstElementChild.firstElementChild.innerHTML += cardTile(courses[obj]);
+    }
+});
 
 
 function responsiveVideo(videoURL) {
