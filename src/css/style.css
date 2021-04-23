@@ -231,9 +231,7 @@ COURSE PAGE TABS
         margin: 1vw .5vw; 
         border: solid 1px #e6e6e6;
     }
-    .course-tabs .active {
-        /* border-bottom: .214rem solid #bcc9d4; */
-    }
+
 }
 
 

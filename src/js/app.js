@@ -13,7 +13,6 @@ const searchDiv         =   document.querySelector('#search');
 const cardsDiv          =   document.querySelector('#cards');
 const topMenu           =   document.querySelector('#menu');
 const videoContainer    =   document.querySelector('#videoContainer');
-const colNav            =   document.querySelector('#colNav');
 
 // generate menu navigation
 const linkHome  =   'http://www.edudevteam.com';
@@ -139,18 +138,19 @@ function loadVideo(url){
 
 
 
-function buildColNav(obj="", count=0)  {
+function buildVideoContent(element, obj="", count=0)  {
     // for testings
+    const htmlElement = document.querySelector(element);
     if(count > 0){
         for(let i = 1; i <= count; i += 1){
-            colNav.innerHTML += `<li id="nav_${i}">Link ${i}</li>`;
+            htmlElement.innerHTML += `<li id="nav_${i}">Link ${i}</li>`;
         }
     } else {
         // load video links and apply loadVideo function
         const arr = courses[`${obj}`]['videos'];
         // generate links
         for(let i = 0; i < arr.length; i += 1) {
-            colNav.innerHTML += `<li id="videoLink_${i}">
+            htmlElement.innerHTML += `<li id="videoLink_${i}">
             <div class="checkbox">
                 <label><input type="checkbox" /></label>
                 <span id="checkbox_${i}" class="col-nav-text text-secondary">${i+1}.  ${arr[i]['title']}</span>
@@ -171,7 +171,7 @@ function buildColNav(obj="", count=0)  {
     
     // set height and apply overflow-y:scroll if video links are greater than screen height
     let screenHeight = window.innerHeight - navDiv.clientHeight;
-    if(colNav.clientHeight > screenHeight){
+    if(htmlElement.clientHeight > screenHeight){
         document.querySelector('.col-nav').style = `height: ${screenHeight - navDiv.clientHeight}px; overflow-y: scroll;`;
     }
 }
@@ -190,7 +190,7 @@ const overviewContent = document.querySelector('#overviewContent');
 const classroomContent = document.querySelector('#classroomContent');
 const updatesContent = document.querySelector('#updatesContent');
 // --- only display on tablet or smaller screens
-const videosContent = document.querySelector('#videosContent');
+const videoContentMobile = document.querySelector('#videoContentMobile');
 
 const courseAbout = document.querySelector('#courseAbout');
 const courseCat = document.querySelector('#courseCat');
@@ -209,13 +209,31 @@ function activeTab(htmlElement){
 }
 
 function hideAllDetails() {
-    for (const content of [overviewContent, classroomContent, updatesContent]) {
+    for (const content of [overviewContent, classroomContent, updatesContent, videoContentMobile]) {
         content.classList = 'd-none';
     }
 }
 
+// this hides the video tab and re-activates another tab
+function setDefaultActiveTab(defaultActiveTab, defaultActiveTabContent, activeTab){
+    
+    window.addEventListener('resize', ()=>{
+        // tablet size
+        if(window.innerWidth > 768 && activeTab.classList.contains('d-lg-none')){
+            defaultActiveTab.classList.add('active');
+            showDetails(defaultActiveTabContent);
+        }
+      });
+}
+
 function showDetails(htmlElement){
-    htmlElement.classList = 'd-block';
+    if (htmlElement.tagName === 'UL') {
+        htmlElement.classList = 'list-unstyled';
+    } else {
+        htmlElement.classList = 'd-block';
+    }
+    
+    
 }
 
 // functions that display content from courses.js
