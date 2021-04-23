@@ -176,6 +176,9 @@ body {
     .mobile-nav button {
         margin-left: 0;
     }
+    .text-right {
+        text-align: unset !important;
+    }
 }
 
 /* Screen width less than 576 */
