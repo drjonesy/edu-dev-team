@@ -136,15 +136,17 @@ function searchBy(){
 }
 
 // Clear Search Button
-const clearSearch = document.querySelector('#clearSearch');
-clearSearch.addEventListener('click', ()=>{
-    // clear field and return all results
-    clearCourseResults(); // clear results
-    search.value = "";
-    for(const obj in courses){
-        cardsDiv.firstElementChild.firstElementChild.innerHTML += cardTile(courses[obj]);
-    }
-});
+const clearSearchElement = document.querySelector('#clearSearch');
+function clearSearch(){
+    clearSearchElement.addEventListener('click', ()=>{
+        // clear field and return all results
+        clearCourseResults(); // clear results
+        search.value = "";
+        for(const obj in courses){
+            cardsDiv.firstElementChild.firstElementChild.innerHTML += cardTile(courses[obj]);
+        }
+    });
+}
 
 
 function responsiveVideo(videoURL) {
