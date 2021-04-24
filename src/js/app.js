@@ -312,3 +312,12 @@ function addUpdates(htmlElement, obj) {
 function insertHTML(htmlElement, html) {
     document.querySelector(htmlElement).innerHTML = html;
 }
+
+// add meta information for course
+function headData(obj=""){
+    const metaDescription = document.querySelector('meta[name="description"]');
+    const title = document.querySelector('title');
+
+    metaDescription.content = courses[obj]['desc'];
+    title.innerText = courses[obj]['title'];
+}
