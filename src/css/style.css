@@ -93,6 +93,10 @@ Course Videos List
     background-color: #ffede2;
 }
 
+#videoPrev:hover, #videoNext:hover {
+    cursor: pointer;
+}
+
 /* =============================
 COURSE PAGE TABS
 ===================================*/
