@@ -93,7 +93,7 @@ Course Videos List
     background-color: #ffede2;
 }
 
-#videoPrev:hover, #videoNext:hover {
+.pointer {
     cursor: pointer;
 }
 
