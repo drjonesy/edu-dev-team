@@ -14,13 +14,6 @@ const cardsDiv          =   document.querySelector('#cards');
 const topMenu           =   document.querySelector('#menu');
 const videoContainer    =   document.querySelector('#videoContainer');
 
-// generate menu navigation
-const linkHome  =   'http://www.edudevteam.com';
-const linkAbout =   'http://www.edudevteam.com/about.html';
-
-
-
-
 
 
 // ==== FUNCTIONS
