@@ -89,6 +89,9 @@ Course Videos List
     cursor: pointer;
 }
 
+.active-list-item {
+    background-color: #ffede2;
+}
 
 /* =============================
 COURSE PAGE TABS

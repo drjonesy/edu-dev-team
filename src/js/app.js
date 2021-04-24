@@ -9,13 +9,14 @@ let activeVideoIndex = 0;
 
 // Query Elements
 
-const body              =   document.querySelector('body');
-const navDiv            =   document.querySelector('#nav');
-const featureDiv        =   document.querySelector('#feature');
-const searchDiv         =   document.querySelector('#search');
-const cardsDiv          =   document.querySelector('#cards');
-const topMenu           =   document.querySelector('#menu');
-const videoContainer    =   document.querySelector('#videoContainer');
+const body                  =   document.querySelector('body');
+const navDiv                =   document.querySelector('#nav');
+const featureDiv            =   document.querySelector('#feature');
+const searchDiv             =   document.querySelector('#search');
+const cardsDiv              =   document.querySelector('#cards');
+const topMenu               =   document.querySelector('#menu');
+const videoContainer        =   document.querySelector('#videoContainer');
+const videoContentDektop    =   document.querySelector('#videoContentDesktop');
 
 
 
@@ -199,12 +200,23 @@ function buildVideoContent(element, obj="", count=0)  {
         };
         // insert first video
         loadVideo(arr[0]['url'], 0);
+        // apply active-list-item to first video
+        const initialListItems = document.querySelectorAll('#videoLink_0');
+        for(const element of initialListItems){
+            element.classList.add('active-list-item');
+        }
+        
         // attach event handlers
         for(let i = 0; i < arr.length; i += 1){
             const textLink = document.querySelector(`#checkbox_${i}`);
             textLink.addEventListener('click', ()=>{
                 loadVideo(arr[i]['url'], i);
+                clearActiveVideoListItems(videoContentDesktop);
+                clearActiveVideoListItems(videoContentMobile);
+                setActiveVideoListItem(videoContentDektop, i);
+                setActiveVideoListItem(videoContentMobile, i);
             });
+            
         }
     }
     
@@ -214,6 +226,21 @@ function buildVideoContent(element, obj="", count=0)  {
         document.querySelector('.col-nav').style = `height: ${screenHeight - navDiv.clientHeight}px; overflow-y: scroll;`;
     }
 }
+/* ========================================
+--- Set Active Video In Playlist BG Color
+=========================================== */ 
+function clearActiveVideoListItems(listElement) {
+    const nodeList = listElement.childNodes;
+    for(const element of nodeList){
+        element.classList.remove('active-list-item');
+    }
+}
+function setActiveVideoListItem(listElement, index) {
+    // set class active
+    const htmlElement = listElement.childNodes[index];
+    htmlElement.classList.add('active-list-item');
+}
+
 
 /*====================================
 --- Playlist Prev and Next buttons
@@ -233,6 +260,10 @@ function videoPrevNext(obj){
         if(index > 0) {
             loadVideo(videos[activeVideoIndex - 1]['url']);
             activeVideoIndex = index - 1;
+            clearActiveVideoListItems(videoContentDesktop);
+            clearActiveVideoListItems(videoContentMobile);
+            setActiveVideoListItem(videoContentDektop, activeVideoIndex);
+            setActiveVideoListItem(videoContentMobile, activeVideoIndex);
         } 
     });
     // Load Next Video
@@ -242,6 +273,10 @@ function videoPrevNext(obj){
         if(index < videos.length) {
             loadVideo(videos[activeVideoIndex + 1]['url']);
             activeVideoIndex = index + 1;
+            clearActiveVideoListItems(videoContentDesktop);
+            clearActiveVideoListItems(videoContentMobile);
+            setActiveVideoListItem(videoContentDektop, activeVideoIndex);
+            setActiveVideoListItem(videoContentMobile, activeVideoIndex);
         }
     });
 }
