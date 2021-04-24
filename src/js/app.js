@@ -4,6 +4,9 @@
 // Could not use pure pure JSON. Had to prepend: 'const courses =' 
 // This files assumes courses.js is imported before this script
 
+// track active video index
+let activeVideoIndex = 0;
+
 // Query Elements
 
 const body              =   document.querySelector('body');
@@ -146,11 +149,13 @@ function responsiveVideo(videoURL) {
     videoContainer.innerHTML = `<iframe class="video" src="${videoURL}" allowfullscreen></iframe>`
 }
 
-function loadVideo(url){
+function loadVideo(url, videoIndex){
     // clear current video
     videoContainer.innerHTML = "";
     // load clicked video
     responsiveVideo(url);
+    // set active index
+    activeVideoIndex = videoIndex;
 }
 /* ==========================
 --- CUSTOM CHECKBOXES
@@ -170,13 +175,17 @@ function checkBox(){
 
 }
 
+/* ======================================
+--- Video List Navigation
+======================================== */ 
 function buildVideoContent(element, obj="", count=0)  {
-    // for testings
     const htmlElement = document.querySelector(element);
+    // set count greater than zero for generating dummy links otherwise ignore and leave as default
     if(count > 0){
         for(let i = 1; i <= count; i += 1){
             htmlElement.innerHTML += `<li id="nav_${i}">Link ${i}</li>`;
         }
+    // generate content from course object
     } else {
         // load video links and apply loadVideo function
         const arr = courses[`${obj}`]['videos'];
@@ -189,12 +198,12 @@ function buildVideoContent(element, obj="", count=0)  {
 
         };
         // insert first video
-        loadVideo(arr[0]['url']);
+        loadVideo(arr[0]['url'], 0);
         // attach event handlers
         for(let i = 0; i < arr.length; i += 1){
             const textLink = document.querySelector(`#checkbox_${i}`);
             textLink.addEventListener('click', ()=>{
-                loadVideo(arr[i]['url']);
+                loadVideo(arr[i]['url'], i);
             });
         }
     }
@@ -206,6 +215,36 @@ function buildVideoContent(element, obj="", count=0)  {
     }
 }
 
+/*====================================
+--- Playlist Prev and Next buttons
+======================================*/ 
+function videoPrevNext(obj){
+    // get links
+    const videoPrev = document.querySelector('#videoPrev');
+    const videoNext = document.querySelector('#videoNext');
+    // get video list
+    const videos = courses[obj]['videos'];
+    // activeVideoIndex
+    let index = 0;    
+    // Load Previous Video
+    videoPrev.addEventListener('click', ()=>{
+        // load prev video if exists
+        index = parseInt(activeVideoIndex);
+        if(index > 0) {
+            loadVideo(videos[activeVideoIndex - 1]['url']);
+            activeVideoIndex = index - 1;
+        } 
+    });
+    // Load Next Video
+    videoNext.addEventListener('click', ()=>{
+        // load next video if exist
+        index = parseInt(activeVideoIndex);
+        if(index < videos.length) {
+            loadVideo(videos[activeVideoIndex + 1]['url']);
+            activeVideoIndex = index + 1;
+        }
+    });
+}
 
 
 
