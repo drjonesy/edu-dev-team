@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Knewave&effect=shadow-multiple');
 @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
 
+body {
+    font-family: 'Oxygen', sans-serif;
+}
+
 #page-bg {
     background-color: rgb(255, 255, 255);
     padding-bottom: 2rem;
@@ -221,15 +225,6 @@ COURSE PAGE TABS
 .codeblock .tab4 {
     padding-left: 7em;
 }
-
-/* ============================ 
--- BODY
-==============================*/
-body {
-    font-family: 'Oxygen', sans-serif;
-    background-color: #f5f5f5 !important;
-}
-
 
 /* screen width >= 767 */
 @media only screen and (max-width: 767px) {
